@@ -10,6 +10,8 @@ src/EventLoop.cc
 src/Channel.cc
 src/Epoll.cc
 src/Wakeuper.cc
+src/Timestamp.cc
+src/TimerQueue.cc
 )
 
 add_executable(test01 test/test01.cc)
@@ -23,3 +25,9 @@ target_link_libraries( test03 -lpthread server)
 
 add_executable(test04 test/test04.cc)
 target_link_libraries( test04 -lpthread server)
+
+add_executable(test05 test/test05.cc)
+target_link_libraries(test05 -lpthread server)
+
+add_executable(test06 test/test06.cc)
+target_link_libraries(test06 -lpthread server)

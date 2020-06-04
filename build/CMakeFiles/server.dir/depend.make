@@ -16,8 +16,20 @@ CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Callback.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Channel.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Epoll.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/TimerQueue.h
+CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Timestamp.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Wakeuper.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../src/EventLoop.cc
+
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/Callback.h
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/Channel.h
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/TimerQueue.h
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/Timestamp.h
+CMakeFiles/server.dir/src/TimerQueue.cc.o: ../src/TimerQueue.cc
+
+CMakeFiles/server.dir/src/Timestamp.cc.o: ../include/Timestamp.h
+CMakeFiles/server.dir/src/Timestamp.cc.o: ../src/Timestamp.cc
 
 CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/Callback.h
 CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/Channel.h

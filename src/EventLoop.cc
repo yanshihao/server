@@ -5,12 +5,14 @@
 #include <assert.h>
 #include "Epoll.h"
 #include "Wakeuper.h"
+#include "TimerQueue.h"
 __thread EventLoop* t_loop = nullptr;
 
 EventLoop::EventLoop()
 :threadId_(std::this_thread::get_id()),
 epoll_(new Epoll(this)), callingPendingFunctors_(false),
-loop_(false), quit_(false),wakeuper_(new Wakeuper(this))
+loop_(false), quit_(false),wakeuper_(new Wakeuper(this)),
+timerQueue_(new TimerQueue(this))
 {
     if(t_loop == nullptr)
         t_loop = this;
@@ -117,4 +119,31 @@ void EventLoop::deleteChannel(Channel* channel)
 void EventLoop::wakeup()
 {
     wakeuper_->wakeup();
+}
+
+void EventLoop::runAt(const Timestamp& stamp, const Callback& cb)
+{  
+    runInLoop(
+        std::bind(&EventLoop::addTimer,this,
+        stamp, cb, 0)
+    );
+}
+
+void EventLoop::runAfter(double interval, const Callback& cb)
+{
+    Timestamp when = addTime(Timestamp::now(),interval);
+    runAt(when,cb);
+}
+
+void EventLoop::runEvery(double interval, const Callback& cb)
+{
+    runInLoop(
+        std::bind(&EventLoop::addTimer,this,
+        Timestamp::now(), cb, interval)
+    );
+}
+
+void EventLoop::addTimer(Timestamp stamp, const Callback& cb, double interval)
+{
+    timerQueue_->addTimer(stamp,cb,interval);
 }

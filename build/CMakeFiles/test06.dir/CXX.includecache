@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Callback.h
+functional
+-
+memory
+-
+vector
+-
+unordered_map
+-
+
+../include/EventLoop.h
+thread
+-
+vector
+-
+functional
+-
+memory
+-
+mutex
+-
+Callback.h
+../include/Callback.h
+
+/home/ysh/git/server/s5/test/test06.cc
+EventLoop.h
+/home/ysh/git/server/s5/test/EventLoop.h
+thread
+-
+iostream
+-
+chrono
+-
+

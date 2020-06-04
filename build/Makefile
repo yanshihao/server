@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test06
+
+# Build rule for target.
+test06: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test06
+.PHONY : test06
+
+# fast build rule for target.
+test06/fast:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
+.PHONY : test06/fast
+
+#=============================================================================
+# Target rules for targets named test05
+
+# Build rule for target.
+test05: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test05
+.PHONY : test05
+
+# fast build rule for target.
+test05/fast:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/build
+.PHONY : test05/fast
+
+#=============================================================================
 # Target rules for targets named test04
 
 # Build rule for target.
@@ -256,6 +282,60 @@ src/EventLoop.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/EventLoop.cc.s
 .PHONY : src/EventLoop.cc.s
 
+src/TimerQueue.o: src/TimerQueue.cc.o
+
+.PHONY : src/TimerQueue.o
+
+# target to build an object file
+src/TimerQueue.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TimerQueue.cc.o
+.PHONY : src/TimerQueue.cc.o
+
+src/TimerQueue.i: src/TimerQueue.cc.i
+
+.PHONY : src/TimerQueue.i
+
+# target to preprocess a source file
+src/TimerQueue.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TimerQueue.cc.i
+.PHONY : src/TimerQueue.cc.i
+
+src/TimerQueue.s: src/TimerQueue.cc.s
+
+.PHONY : src/TimerQueue.s
+
+# target to generate assembly for a file
+src/TimerQueue.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TimerQueue.cc.s
+.PHONY : src/TimerQueue.cc.s
+
+src/Timestamp.o: src/Timestamp.cc.o
+
+.PHONY : src/Timestamp.o
+
+# target to build an object file
+src/Timestamp.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Timestamp.cc.o
+.PHONY : src/Timestamp.cc.o
+
+src/Timestamp.i: src/Timestamp.cc.i
+
+.PHONY : src/Timestamp.i
+
+# target to preprocess a source file
+src/Timestamp.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Timestamp.cc.i
+.PHONY : src/Timestamp.cc.i
+
+src/Timestamp.s: src/Timestamp.cc.s
+
+.PHONY : src/Timestamp.s
+
+# target to generate assembly for a file
+src/Timestamp.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Timestamp.cc.s
+.PHONY : src/Timestamp.cc.s
+
 src/Wakeuper.o: src/Wakeuper.cc.o
 
 .PHONY : src/Wakeuper.o
@@ -391,6 +471,60 @@ test/test04.cc.s:
 	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/test/test04.cc.s
 .PHONY : test/test04.cc.s
 
+test/test05.o: test/test05.cc.o
+
+.PHONY : test/test05.o
+
+# target to build an object file
+test/test05.cc.o:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/test/test05.cc.o
+.PHONY : test/test05.cc.o
+
+test/test05.i: test/test05.cc.i
+
+.PHONY : test/test05.i
+
+# target to preprocess a source file
+test/test05.cc.i:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/test/test05.cc.i
+.PHONY : test/test05.cc.i
+
+test/test05.s: test/test05.cc.s
+
+.PHONY : test/test05.s
+
+# target to generate assembly for a file
+test/test05.cc.s:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/test/test05.cc.s
+.PHONY : test/test05.cc.s
+
+test/test06.o: test/test06.cc.o
+
+.PHONY : test/test06.o
+
+# target to build an object file
+test/test06.cc.o:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/test/test06.cc.o
+.PHONY : test/test06.cc.o
+
+test/test06.i: test/test06.cc.i
+
+.PHONY : test/test06.i
+
+# target to preprocess a source file
+test/test06.cc.i:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/test/test06.cc.i
+.PHONY : test/test06.cc.i
+
+test/test06.s: test/test06.cc.s
+
+.PHONY : test/test06.s
+
+# target to generate assembly for a file
+test/test06.cc.s:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/test/test06.cc.s
+.PHONY : test/test06.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -398,6 +532,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test06"
+	@echo "... test05"
 	@echo "... test04"
 	@echo "... rebuild_cache"
 	@echo "... test02"
@@ -413,6 +549,12 @@ help:
 	@echo "... src/EventLoop.o"
 	@echo "... src/EventLoop.i"
 	@echo "... src/EventLoop.s"
+	@echo "... src/TimerQueue.o"
+	@echo "... src/TimerQueue.i"
+	@echo "... src/TimerQueue.s"
+	@echo "... src/Timestamp.o"
+	@echo "... src/Timestamp.i"
+	@echo "... src/Timestamp.s"
 	@echo "... src/Wakeuper.o"
 	@echo "... src/Wakeuper.i"
 	@echo "... src/Wakeuper.s"
@@ -428,6 +570,12 @@ help:
 	@echo "... test/test04.o"
 	@echo "... test/test04.i"
 	@echo "... test/test04.s"
+	@echo "... test/test05.o"
+	@echo "... test/test05.i"
+	@echo "... test/test05.s"
+	@echo "... test/test06.o"
+	@echo "... test/test06.i"
+	@echo "... test/test06.s"
 .PHONY : help
 
 

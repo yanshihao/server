@@ -4,9 +4,11 @@
 #include <functional>
 #include <memory>
 #include <mutex>
+#include "Callback.h"
 class Epoll;
 class Channel;
 class Wakeuper;
+class TimerQueue;
 typedef std::function<void()> Task;
 
 // EventLoop在每一个事件循环线程都有且只有一个实例
@@ -38,10 +40,19 @@ public:
     void deleteChannel(Channel* channel);
 
     void wakeup();
+
+    // 添加时间任务,可能在别的线程
+    void runAfter(double interval, const Callback& cb);
+    void runAt(const Timestamp& stamp, const Callback& cb);
+    void runEvery(double interval, const Callback& cb);
+
 private:
 
     // 执行插入任务
     void doPendingWorks();
+
+    // 添加时间任务
+    void addTimer(Timestamp stamp, const Callback& cb, double interval);
 
     // 线程ID
     std::thread::id threadId_;
@@ -60,4 +71,5 @@ private:
     bool quit_;
 
     std::unique_ptr<Wakeuper> wakeuper_;
+    std::unique_ptr<TimerQueue> timerQueue_;
 };

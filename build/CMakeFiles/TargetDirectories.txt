@@ -1,4 +1,6 @@
 /home/ysh/git/server/s5/build/CMakeFiles/edit_cache.dir
+/home/ysh/git/server/s5/build/CMakeFiles/test06.dir
+/home/ysh/git/server/s5/build/CMakeFiles/test05.dir
 /home/ysh/git/server/s5/build/CMakeFiles/test04.dir
 /home/ysh/git/server/s5/build/CMakeFiles/rebuild_cache.dir
 /home/ysh/git/server/s5/build/CMakeFiles/test02.dir

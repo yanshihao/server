@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/Channel.cc.o"
   "CMakeFiles/server.dir/src/Epoll.cc.o"
   "CMakeFiles/server.dir/src/Wakeuper.cc.o"
+  "CMakeFiles/server.dir/src/Timestamp.cc.o"
+  "CMakeFiles/server.dir/src/TimerQueue.cc.o"
   "libserver.pdb"
   "libserver.a"
 )

@@ -4,7 +4,7 @@
 #include <unordered_map>
 class TcpConnection;
 class Buffer;
-class TimeStamp;
+class Timestamp;
 
 typedef std::function <void ()>  Callback;
 typedef std::shared_ptr<TcpConnection>  TcpConnectionPtr;
@@ -19,7 +19,7 @@ typedef std::function<void (const TcpConnection&)>  ConnectionCallback;
 
 // 当有消息到来时的回调函数，主要用来处理信息
 typedef std::function<void (const TcpConnectionPtr&, 
-                    Buffer* buffer, const TimeStamp&)> MessageCallback;
+                    Buffer* buffer, const Timestamp&)> MessageCallback;
 
 // 当发送完毕时的回调函数，主要用来显示消息或者进一步动作
 typedef std::function<void (const TcpConnection&)> WriteCompleteCallback;

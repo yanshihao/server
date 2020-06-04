@@ -10,7 +10,7 @@ Class Wakeuper;         唤醒者
 
 Class Buffer;           缓冲
 Class Timer;            记录时间
-Class TimeStamp;        时间戳
+Class Timestamp;        时间戳
 class Socket;           套节字及一些套接字的便利函数
 
 2. 定义回调函数接口
