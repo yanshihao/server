@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test04
+
+# Build rule for target.
+test04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test04
+.PHONY : test04
+
+# fast build rule for target.
+test04/fast:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/build
+.PHONY : test04/fast
+
+#=============================================================================
 # Target rules for targets named test02
 
 # Build rule for target.
@@ -243,6 +256,33 @@ src/EventLoop.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/EventLoop.cc.s
 .PHONY : src/EventLoop.cc.s
 
+src/Wakeuper.o: src/Wakeuper.cc.o
+
+.PHONY : src/Wakeuper.o
+
+# target to build an object file
+src/Wakeuper.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Wakeuper.cc.o
+.PHONY : src/Wakeuper.cc.o
+
+src/Wakeuper.i: src/Wakeuper.cc.i
+
+.PHONY : src/Wakeuper.i
+
+# target to preprocess a source file
+src/Wakeuper.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Wakeuper.cc.i
+.PHONY : src/Wakeuper.cc.i
+
+src/Wakeuper.s: src/Wakeuper.cc.s
+
+.PHONY : src/Wakeuper.s
+
+# target to generate assembly for a file
+src/Wakeuper.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Wakeuper.cc.s
+.PHONY : src/Wakeuper.cc.s
+
 test/test01.o: test/test01.cc.o
 
 .PHONY : test/test01.o
@@ -324,6 +364,33 @@ test/test03.cc.s:
 	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/test/test03.cc.s
 .PHONY : test/test03.cc.s
 
+test/test04.o: test/test04.cc.o
+
+.PHONY : test/test04.o
+
+# target to build an object file
+test/test04.cc.o:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/test/test04.cc.o
+.PHONY : test/test04.cc.o
+
+test/test04.i: test/test04.cc.i
+
+.PHONY : test/test04.i
+
+# target to preprocess a source file
+test/test04.cc.i:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/test/test04.cc.i
+.PHONY : test/test04.cc.i
+
+test/test04.s: test/test04.cc.s
+
+.PHONY : test/test04.s
+
+# target to generate assembly for a file
+test/test04.cc.s:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/test/test04.cc.s
+.PHONY : test/test04.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -331,6 +398,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test04"
 	@echo "... rebuild_cache"
 	@echo "... test02"
 	@echo "... server"
@@ -345,6 +413,9 @@ help:
 	@echo "... src/EventLoop.o"
 	@echo "... src/EventLoop.i"
 	@echo "... src/EventLoop.s"
+	@echo "... src/Wakeuper.o"
+	@echo "... src/Wakeuper.i"
+	@echo "... src/Wakeuper.s"
 	@echo "... test/test01.o"
 	@echo "... test/test01.i"
 	@echo "... test/test01.s"
@@ -354,6 +425,9 @@ help:
 	@echo "... test/test03.o"
 	@echo "... test/test03.i"
 	@echo "... test/test03.s"
+	@echo "... test/test04.o"
+	@echo "... test/test04.i"
+	@echo "... test/test04.s"
 .PHONY : help
 
 

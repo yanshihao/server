@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/EventLoop.cc.o"
   "CMakeFiles/server.dir/src/Channel.cc.o"
   "CMakeFiles/server.dir/src/Epoll.cc.o"
+  "CMakeFiles/server.dir/src/Wakeuper.cc.o"
   "libserver.pdb"
   "libserver.a"
 )

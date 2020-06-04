@@ -6,6 +6,7 @@
 #include <mutex>
 class Epoll;
 class Channel;
+class Wakeuper;
 typedef std::function<void()> Task;
 
 // EventLoop在每一个事件循环线程都有且只有一个实例
@@ -36,6 +37,7 @@ public:
     void updateChannel(Channel* channel);
     void deleteChannel(Channel* channel);
 
+    void wakeup();
 private:
 
     // 执行插入任务
@@ -56,4 +58,6 @@ private:
 
     bool loop_;
     bool quit_;
+
+    std::unique_ptr<Wakeuper> wakeuper_;
 };

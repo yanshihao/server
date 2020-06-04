@@ -16,5 +16,12 @@ CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Callback.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Channel.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Epoll.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Wakeuper.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../src/EventLoop.cc
+
+CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/Callback.h
+CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/Channel.h
+CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/Wakeuper.cc.o: ../include/Wakeuper.h
+CMakeFiles/server.dir/src/Wakeuper.cc.o: ../src/Wakeuper.cc
 

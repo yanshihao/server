@@ -40,6 +40,10 @@ memory
 mutex
 -
 
+../include/Wakeuper.h
+Channel.h
+../include/Channel.h
+
 /home/ysh/git/server/s5/src/Channel.cc
 Channel.h
 /home/ysh/git/server/s5/src/Channel.h
@@ -77,4 +81,20 @@ assert.h
 -
 Epoll.h
 /home/ysh/git/server/s5/src/Epoll.h
+Wakeuper.h
+/home/ysh/git/server/s5/src/Wakeuper.h
+
+/home/ysh/git/server/s5/src/Wakeuper.cc
+sys/eventfd.h
+-
+EventLoop.h
+/home/ysh/git/server/s5/src/EventLoop.h
+Wakeuper.h
+/home/ysh/git/server/s5/src/Wakeuper.h
+Channel.h
+/home/ysh/git/server/s5/src/Channel.h
+functional
+-
+unistd.h
+-
 

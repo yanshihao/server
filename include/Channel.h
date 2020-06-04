@@ -63,10 +63,12 @@ public:
     void setUnWritable();
     void setErrorable();
 
+    void assertWorkDone();
+    void deleteChannel();
 private:
     void assertInThisLoop();
     void updateChannel();
-    void deleteChannel();
+    
     EventLoop* loop_;
     int fd_;
     uint32_t events_;

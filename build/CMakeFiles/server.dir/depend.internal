@@ -17,4 +17,11 @@ CMakeFiles/server.dir/src/EventLoop.cc.o
  ../include/Channel.h
  ../include/Epoll.h
  ../include/EventLoop.h
+ ../include/Wakeuper.h
  /home/ysh/git/server/s5/src/EventLoop.cc
+CMakeFiles/server.dir/src/Wakeuper.cc.o
+ ../include/Callback.h
+ ../include/Channel.h
+ ../include/EventLoop.h
+ ../include/Wakeuper.h
+ /home/ysh/git/server/s5/src/Wakeuper.cc

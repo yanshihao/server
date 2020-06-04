@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include <assert.h>
 #include "Epoll.h"
-
+#include "Wakeuper.h"
 __thread EventLoop* t_loop = nullptr;
 
 EventLoop::EventLoop()
 :threadId_(std::this_thread::get_id()),
 epoll_(new Epoll(this)), callingPendingFunctors_(false),
-loop_(false), quit_(false)
+loop_(false), quit_(false),wakeuper_(new Wakeuper(this))
 {
     if(t_loop == nullptr)
         t_loop = this;
@@ -49,6 +49,7 @@ void EventLoop::loop()
 void EventLoop::quit()
 {
     quit_ = true;
+    wakeup();
 }
 
 bool EventLoop::inThisThread()
@@ -79,8 +80,15 @@ void EventLoop::doPendingWorks()
 
 void EventLoop::queueInLoop(const Task& task)
 {
-    std::unique_lock<std::mutex> lock(mutex_);
-    pendingWorks_.push_back(task);
+    {
+        std::unique_lock<std::mutex> lock(mutex_);
+        pendingWorks_.push_back(task);
+    }
+
+    if(!inThisThread() || (callingPendingFunctors_ == true))
+    {
+        wakeup();
+    }
 }
 
 void EventLoop::runInLoop(const Task& task)
@@ -104,4 +112,9 @@ void EventLoop::updateChannel(Channel* channel)
 void EventLoop::deleteChannel(Channel* channel)
 {
     epoll_->deleteChannel(channel);
+}
+
+void EventLoop::wakeup()
+{
+    wakeuper_->wakeup();
 }

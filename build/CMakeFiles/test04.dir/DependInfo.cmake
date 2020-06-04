@@ -4,10 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ysh/git/server/s5/src/Channel.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Channel.cc.o"
-  "/home/ysh/git/server/s5/src/Epoll.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Epoll.cc.o"
-  "/home/ysh/git/server/s5/src/EventLoop.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/EventLoop.cc.o"
-  "/home/ysh/git/server/s5/src/Wakeuper.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Wakeuper.cc.o"
+  "/home/ysh/git/server/s5/test/test04.cc" "/home/ysh/git/server/s5/build/CMakeFiles/test04.dir/test/test04.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,6 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

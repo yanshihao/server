@@ -10,10 +10,13 @@ Channel::Channel(EventLoop* loop, int fd)
 
 }
 
-Channel::~Channel()
+void Channel::assertWorkDone()
 {
     assert(handlework_ == false);
-    deleteChannel();
+}
+
+Channel::~Channel()
+{
 }
 
 void Channel::handle()
