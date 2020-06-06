@@ -42,9 +42,9 @@ public:
     void wakeup();
 
     // 添加时间任务,可能在别的线程
-    void runAfter(double interval, const Callback& cb);
+    void runAfter(double after, const Callback& cb);
     void runAt(const Timestamp& stamp, const Callback& cb);
-    void runEvery(double interval, const Callback& cb);
+    void runEvery(double after, double interval, const Callback& cb);
 
 private:
 

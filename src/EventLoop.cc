@@ -129,17 +129,17 @@ void EventLoop::runAt(const Timestamp& stamp, const Callback& cb)
     );
 }
 
-void EventLoop::runAfter(double interval, const Callback& cb)
+void EventLoop::runAfter(double after, const Callback& cb)
 {
-    Timestamp when = addTime(Timestamp::now(),interval);
+    Timestamp when = addTime(Timestamp::now(),after);
     runAt(when,cb);
 }
 
-void EventLoop::runEvery(double interval, const Callback& cb)
+void EventLoop::runEvery(double after, double interval, const Callback& cb)
 {
     runInLoop(
         std::bind(&EventLoop::addTimer,this,
-        Timestamp::now(), cb, interval)
+        addTime(Timestamp::now(),after), cb, interval)
     );
 }
 

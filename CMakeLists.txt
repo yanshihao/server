@@ -31,3 +31,6 @@ target_link_libraries(test05 -lpthread server)
 
 add_executable(test06 test/test06.cc)
 target_link_libraries(test06 -lpthread server)
+
+add_executable(test07 test/test07.cc)
+target_link_libraries(test07 -lpthread server)

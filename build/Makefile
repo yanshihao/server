@@ -124,6 +124,19 @@ test06/fast:
 .PHONY : test06/fast
 
 #=============================================================================
+# Target rules for targets named test07
+
+# Build rule for target.
+test07: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test07
+.PHONY : test07
+
+# fast build rule for target.
+test07/fast:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/build
+.PHONY : test07/fast
+
+#=============================================================================
 # Target rules for targets named test05
 
 # Build rule for target.
@@ -525,6 +538,33 @@ test/test06.cc.s:
 	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/test/test06.cc.s
 .PHONY : test/test06.cc.s
 
+test/test07.o: test/test07.cc.o
+
+.PHONY : test/test07.o
+
+# target to build an object file
+test/test07.cc.o:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/test/test07.cc.o
+.PHONY : test/test07.cc.o
+
+test/test07.i: test/test07.cc.i
+
+.PHONY : test/test07.i
+
+# target to preprocess a source file
+test/test07.cc.i:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/test/test07.cc.i
+.PHONY : test/test07.cc.i
+
+test/test07.s: test/test07.cc.s
+
+.PHONY : test/test07.s
+
+# target to generate assembly for a file
+test/test07.cc.s:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/test/test07.cc.s
+.PHONY : test/test07.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -533,6 +573,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... test06"
+	@echo "... test07"
 	@echo "... test05"
 	@echo "... test04"
 	@echo "... rebuild_cache"
@@ -576,6 +617,9 @@ help:
 	@echo "... test/test06.o"
 	@echo "... test/test06.i"
 	@echo "... test/test06.s"
+	@echo "... test/test07.o"
+	@echo "... test/test07.i"
+	@echo "... test/test07.s"
 .PHONY : help
 
 

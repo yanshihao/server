@@ -87,7 +87,7 @@ void TimerQueue::onReadCallback()
     assertInThisLoop();
     readTimerfd(timerfd_);
     Timestamp now(Timestamp::now());
-    while(now > timerList_.top()->getStamp())
+    while(!timerList_.empty() && now > timerList_.top()->getStamp())
     {
         TimerPtr timerptr = timerList_.top();
         timerList_.pop();
@@ -113,14 +113,19 @@ void TimerQueue::addTimer(const Timestamp& stamp,
     if(stamp < Timestamp::now())
     {
         cb();
+        if(interval > 0)
+        {
+            TimerPtr timerptr(new Timer(addTime(stamp , interval),cb,interval));
+            timerList_.push(timerptr);
+        }
         return;
     }
 
     TimerPtr timerptr(new Timer(stamp,cb,interval));
     // 如果小于堆顶时间，则重置
-    if(stamp < timerList_.top()->getStamp())
+    if(timerList_.empty() || stamp < timerList_.top()->getStamp())
     {
-        writeTimerfd(timerfd_, stamp);   
+        writeTimerfd(timerfd_, stamp);
     }
     // 总是要插入堆的
     timerList_.push(timerptr);
