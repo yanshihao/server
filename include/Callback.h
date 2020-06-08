@@ -5,7 +5,7 @@
 class TcpConnection;
 class Buffer;
 class Timestamp;
-
+class InetAddr;
 typedef std::function <void ()>  Callback;
 typedef std::shared_ptr<TcpConnection>  TcpConnectionPtr;
 
@@ -27,3 +27,5 @@ typedef std::function<void (const TcpConnection&)> WriteCompleteCallback;
 class Channel;
 typedef std::vector<Channel*>  ChannelList;
 typedef std::unordered_map<int, Channel*> ChannelMap;
+
+typedef std::function<void (int, const InetAddr&)>  AcceptorCallback;

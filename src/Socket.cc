@@ -102,6 +102,8 @@ int Socket::accept(InetAddr& peerAddr)
         exit(1);
     }
 
+    
+
     if(connfd == -1)
     {
         errno = saveErrno; 
@@ -131,6 +133,7 @@ int Socket::accept(InetAddr& peerAddr)
     else
     {
         peerAddr.setAddr(addr);
+        sockets::setReuseAddr(connfd);
     }
     return connfd;
 }
@@ -186,4 +189,27 @@ struct sockaddr_in sockets::getPeerAddr(int sockfd)
         exit(1);
     }
     return peeraddr;
+}
+
+int sockets::createListenfd()
+{
+    int fd = ::socket(AF_INET, SOCK_STREAM|SOCK_NONBLOCK|SOCK_CLOEXEC,IPPROTO_IP);
+    if(fd == -1)
+    {
+        perror("socket");
+        exit(1);
+    }
+    else
+    {
+        setReuseAddr(fd);
+    }
+    
+    return fd;
+}
+
+void sockets::setReuseAddr(int fd)
+{
+    int optval = 1;
+    ::setsockopt(fd, SOL_SOCKET, SO_REUSEADDR,
+               &optval, sizeof optval);
 }

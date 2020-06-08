@@ -228,6 +228,19 @@ test082/fast:
 .PHONY : test082/fast
 
 #=============================================================================
+# Target rules for targets named test09
+
+# Build rule for target.
+test09: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test09
+.PHONY : test09
+
+# fast build rule for target.
+test09/fast:
+	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/build
+.PHONY : test09/fast
+
+#=============================================================================
 # Target rules for targets named test06
 
 # Build rule for target.
@@ -239,6 +252,33 @@ test06: cmake_check_build_system
 test06/fast:
 	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
 .PHONY : test06/fast
+
+src/Acceptor.o: src/Acceptor.cc.o
+
+.PHONY : src/Acceptor.o
+
+# target to build an object file
+src/Acceptor.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Acceptor.cc.o
+.PHONY : src/Acceptor.cc.o
+
+src/Acceptor.i: src/Acceptor.cc.i
+
+.PHONY : src/Acceptor.i
+
+# target to preprocess a source file
+src/Acceptor.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Acceptor.cc.i
+.PHONY : src/Acceptor.cc.i
+
+src/Acceptor.s: src/Acceptor.cc.s
+
+.PHONY : src/Acceptor.s
+
+# target to generate assembly for a file
+src/Acceptor.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Acceptor.cc.s
+.PHONY : src/Acceptor.cc.s
 
 src/Channel.o: src/Channel.cc.o
 
@@ -672,6 +712,33 @@ test/test082.cc.s:
 	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.s
 .PHONY : test/test082.cc.s
 
+test/test09.o: test/test09.cc.o
+
+.PHONY : test/test09.o
+
+# target to build an object file
+test/test09.cc.o:
+	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/test/test09.cc.o
+.PHONY : test/test09.cc.o
+
+test/test09.i: test/test09.cc.i
+
+.PHONY : test/test09.i
+
+# target to preprocess a source file
+test/test09.cc.i:
+	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/test/test09.cc.i
+.PHONY : test/test09.cc.i
+
+test/test09.s: test/test09.cc.s
+
+.PHONY : test/test09.s
+
+# target to generate assembly for a file
+test/test09.cc.s:
+	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/test/test09.cc.s
+.PHONY : test/test09.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -689,7 +756,11 @@ help:
 	@echo "... test081"
 	@echo "... test07"
 	@echo "... test082"
+	@echo "... test09"
 	@echo "... test06"
+	@echo "... src/Acceptor.o"
+	@echo "... src/Acceptor.i"
+	@echo "... src/Acceptor.s"
 	@echo "... src/Channel.o"
 	@echo "... src/Channel.i"
 	@echo "... src/Channel.s"
@@ -738,6 +809,9 @@ help:
 	@echo "... test/test082.o"
 	@echo "... test/test082.i"
 	@echo "... test/test082.s"
+	@echo "... test/test09.o"
+	@echo "... test/test09.i"
+	@echo "... test/test09.s"
 .PHONY : help
 
 

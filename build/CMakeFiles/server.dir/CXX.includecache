@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../include/Acceptor.h
+Socket.h
+../include/Socket.h
+Channel.h
+../include/Channel.h
+Callback.h
+../include/Callback.h
+
 ../include/Callback.h
 functional
 -
@@ -71,6 +79,16 @@ string
 ../include/Wakeuper.h
 Channel.h
 ../include/Channel.h
+
+/home/ysh/git/server/s5/src/Acceptor.cc
+EventLoop.h
+/home/ysh/git/server/s5/src/EventLoop.h
+Channel.h
+/home/ysh/git/server/s5/src/Channel.h
+Socket.h
+/home/ysh/git/server/s5/src/Socket.h
+Acceptor.h
+/home/ysh/git/server/s5/src/Acceptor.h
 
 /home/ysh/git/server/s5/src/Channel.cc
 Channel.h

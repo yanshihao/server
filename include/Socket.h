@@ -54,4 +54,6 @@ namespace sockets
 {
     struct sockaddr_in getLocalAddr(int sockfd);
     struct sockaddr_in getPeerAddr(int sockfd);
+    void setReuseAddr(int fd);
+    int createListenfd();
 };
