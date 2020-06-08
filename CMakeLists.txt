@@ -12,6 +12,7 @@ src/Epoll.cc
 src/Wakeuper.cc
 src/Timestamp.cc
 src/TimerQueue.cc
+src/Socket.cc
 )
 
 add_executable(test01 test/test01.cc)
@@ -34,3 +35,11 @@ target_link_libraries(test06 -lpthread server)
 
 add_executable(test07 test/test07.cc)
 target_link_libraries(test07 -lpthread server)
+
+add_executable(test081 test/test081.cc)
+target_link_libraries(test081 -lpthread server)
+
+add_executable(test082 test/test082.cc)
+target_link_libraries(test082 -lpthread server)
+
+

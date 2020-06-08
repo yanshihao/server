@@ -21,6 +21,9 @@ CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Timestamp.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Wakeuper.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../src/EventLoop.cc
 
+CMakeFiles/server.dir/src/Socket.cc.o: ../include/Socket.h
+CMakeFiles/server.dir/src/Socket.cc.o: ../src/Socket.cc
+
 CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/Callback.h
 CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/Channel.h
 CMakeFiles/server.dir/src/TimerQueue.cc.o: ../include/EventLoop.h

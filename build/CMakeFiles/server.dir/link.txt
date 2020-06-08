@@ -1,2 +1,2 @@
-/usr/bin/ar qc libserver.a  CMakeFiles/server.dir/src/EventLoop.cc.o CMakeFiles/server.dir/src/Channel.cc.o CMakeFiles/server.dir/src/Epoll.cc.o CMakeFiles/server.dir/src/Wakeuper.cc.o CMakeFiles/server.dir/src/Timestamp.cc.o CMakeFiles/server.dir/src/TimerQueue.cc.o
+/usr/bin/ar qc libserver.a  CMakeFiles/server.dir/src/EventLoop.cc.o CMakeFiles/server.dir/src/Channel.cc.o CMakeFiles/server.dir/src/Epoll.cc.o CMakeFiles/server.dir/src/Wakeuper.cc.o CMakeFiles/server.dir/src/Timestamp.cc.o CMakeFiles/server.dir/src/TimerQueue.cc.o CMakeFiles/server.dir/src/Socket.cc.o
 /usr/bin/ranlib libserver.a

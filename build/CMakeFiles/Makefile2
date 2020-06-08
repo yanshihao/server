@@ -60,224 +60,39 @@ CMAKE_SOURCE_DIR = /home/ysh/git/server/s5
 CMAKE_BINARY_DIR = /home/ysh/git/server/s5/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/test06.dir
+# Target rules for target CMakeFiles/test03.dir
 
 # All Build rule for target.
-CMakeFiles/test06.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/depend
-	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=18,19 "Built target test06"
-.PHONY : CMakeFiles/test06.dir/all
+CMakeFiles/test03.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/depend
+	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=13,14 "Built target test03"
+.PHONY : CMakeFiles/test03.dir/all
 
 # Include target in all.
-all: CMakeFiles/test06.dir/all
+all: CMakeFiles/test03.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test06.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test06.dir/all
+CMakeFiles/test03.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test03.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test06.dir/rule
+.PHONY : CMakeFiles/test03.dir/rule
 
 # Convenience name for target.
-test06: CMakeFiles/test06.dir/rule
+test03: CMakeFiles/test03.dir/rule
 
-.PHONY : test06
-
-# clean rule for target.
-CMakeFiles/test06.dir/clean:
-	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/clean
-.PHONY : CMakeFiles/test06.dir/clean
+.PHONY : test03
 
 # clean rule for target.
-clean: CMakeFiles/test06.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test07.dir
-
-# All Build rule for target.
-CMakeFiles/test07.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/depend
-	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=20,21 "Built target test07"
-.PHONY : CMakeFiles/test07.dir/all
-
-# Include target in all.
-all: CMakeFiles/test07.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test07.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test07.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test07.dir/rule
-
-# Convenience name for target.
-test07: CMakeFiles/test07.dir/rule
-
-.PHONY : test07
+CMakeFiles/test03.dir/clean:
+	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/clean
+.PHONY : CMakeFiles/test03.dir/clean
 
 # clean rule for target.
-CMakeFiles/test07.dir/clean:
-	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/clean
-.PHONY : CMakeFiles/test07.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/test07.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test05.dir
-
-# All Build rule for target.
-CMakeFiles/test05.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/depend
-	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=16,17 "Built target test05"
-.PHONY : CMakeFiles/test05.dir/all
-
-# Include target in all.
-all: CMakeFiles/test05.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test05.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test05.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test05.dir/rule
-
-# Convenience name for target.
-test05: CMakeFiles/test05.dir/rule
-
-.PHONY : test05
-
-# clean rule for target.
-CMakeFiles/test05.dir/clean:
-	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/clean
-.PHONY : CMakeFiles/test05.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/test05.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test04.dir
-
-# All Build rule for target.
-CMakeFiles/test04.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/depend
-	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=14,15 "Built target test04"
-.PHONY : CMakeFiles/test04.dir/all
-
-# Include target in all.
-all: CMakeFiles/test04.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test04.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test04.dir/rule
-
-# Convenience name for target.
-test04: CMakeFiles/test04.dir/rule
-
-.PHONY : test04
-
-# clean rule for target.
-CMakeFiles/test04.dir/clean:
-	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/clean
-.PHONY : CMakeFiles/test04.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/test04.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test02.dir
-
-# All Build rule for target.
-CMakeFiles/test02.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/depend
-	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=10,11 "Built target test02"
-.PHONY : CMakeFiles/test02.dir/all
-
-# Include target in all.
-all: CMakeFiles/test02.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test02.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test02.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test02.dir/rule
-
-# Convenience name for target.
-test02: CMakeFiles/test02.dir/rule
-
-.PHONY : test02
-
-# clean rule for target.
-CMakeFiles/test02.dir/clean:
-	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/clean
-.PHONY : CMakeFiles/test02.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/test02.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/server.dir
-
-# All Build rule for target.
-CMakeFiles/server.dir/all:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target server"
-.PHONY : CMakeFiles/server.dir/all
-
-# Include target in all.
-all: CMakeFiles/server.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/server.dir/rule
-
-# Convenience name for target.
-server: CMakeFiles/server.dir/rule
-
-.PHONY : server
-
-# clean rule for target.
-CMakeFiles/server.dir/clean:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
-.PHONY : CMakeFiles/server.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/server.dir/clean
+clean: CMakeFiles/test03.dir/clean
 
 .PHONY : clean
 
@@ -288,7 +103,7 @@ clean: CMakeFiles/server.dir/clean
 CMakeFiles/test01.dir/all: CMakeFiles/server.dir/all
 	$(MAKE) -f CMakeFiles/test01.dir/build.make CMakeFiles/test01.dir/depend
 	$(MAKE) -f CMakeFiles/test01.dir/build.make CMakeFiles/test01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=8,9 "Built target test01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=9,10 "Built target test01"
 .PHONY : CMakeFiles/test01.dir/all
 
 # Include target in all.
@@ -298,7 +113,7 @@ all: CMakeFiles/test01.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test01.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test01.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
 .PHONY : CMakeFiles/test01.dir/rule
@@ -319,39 +134,298 @@ clean: CMakeFiles/test01.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test03.dir
+# Target rules for target CMakeFiles/server.dir
 
 # All Build rule for target.
-CMakeFiles/test03.dir/all: CMakeFiles/server.dir/all
-	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/depend
-	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=12,13 "Built target test03"
-.PHONY : CMakeFiles/test03.dir/all
+CMakeFiles/server.dir/all:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target server"
+.PHONY : CMakeFiles/server.dir/all
 
 # Include target in all.
-all: CMakeFiles/test03.dir/all
+all: CMakeFiles/server.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test03.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test03.dir/all
+CMakeFiles/server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
-.PHONY : CMakeFiles/test03.dir/rule
+.PHONY : CMakeFiles/server.dir/rule
 
 # Convenience name for target.
-test03: CMakeFiles/test03.dir/rule
+server: CMakeFiles/server.dir/rule
 
-.PHONY : test03
-
-# clean rule for target.
-CMakeFiles/test03.dir/clean:
-	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/clean
-.PHONY : CMakeFiles/test03.dir/clean
+.PHONY : server
 
 # clean rule for target.
-clean: CMakeFiles/test03.dir/clean
+CMakeFiles/server.dir/clean:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
+.PHONY : CMakeFiles/server.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/server.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test02.dir
+
+# All Build rule for target.
+CMakeFiles/test02.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/depend
+	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=11,12 "Built target test02"
+.PHONY : CMakeFiles/test02.dir/all
+
+# Include target in all.
+all: CMakeFiles/test02.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test02.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test02.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test02.dir/rule
+
+# Convenience name for target.
+test02: CMakeFiles/test02.dir/rule
+
+.PHONY : test02
+
+# clean rule for target.
+CMakeFiles/test02.dir/clean:
+	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/clean
+.PHONY : CMakeFiles/test02.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test02.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test04.dir
+
+# All Build rule for target.
+CMakeFiles/test04.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/depend
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=15,16 "Built target test04"
+.PHONY : CMakeFiles/test04.dir/all
+
+# Include target in all.
+all: CMakeFiles/test04.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test04.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test04.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test04.dir/rule
+
+# Convenience name for target.
+test04: CMakeFiles/test04.dir/rule
+
+.PHONY : test04
+
+# clean rule for target.
+CMakeFiles/test04.dir/clean:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/clean
+.PHONY : CMakeFiles/test04.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test04.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test05.dir
+
+# All Build rule for target.
+CMakeFiles/test05.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/depend
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=17,18 "Built target test05"
+.PHONY : CMakeFiles/test05.dir/all
+
+# Include target in all.
+all: CMakeFiles/test05.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test05.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test05.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test05.dir/rule
+
+# Convenience name for target.
+test05: CMakeFiles/test05.dir/rule
+
+.PHONY : test05
+
+# clean rule for target.
+CMakeFiles/test05.dir/clean:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/clean
+.PHONY : CMakeFiles/test05.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test05.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test081.dir
+
+# All Build rule for target.
+CMakeFiles/test081.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/depend
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=23,24 "Built target test081"
+.PHONY : CMakeFiles/test081.dir/all
+
+# Include target in all.
+all: CMakeFiles/test081.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test081.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test081.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test081.dir/rule
+
+# Convenience name for target.
+test081: CMakeFiles/test081.dir/rule
+
+.PHONY : test081
+
+# clean rule for target.
+CMakeFiles/test081.dir/clean:
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/clean
+.PHONY : CMakeFiles/test081.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test081.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test07.dir
+
+# All Build rule for target.
+CMakeFiles/test07.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/depend
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=21,22 "Built target test07"
+.PHONY : CMakeFiles/test07.dir/all
+
+# Include target in all.
+all: CMakeFiles/test07.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test07.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test07.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test07.dir/rule
+
+# Convenience name for target.
+test07: CMakeFiles/test07.dir/rule
+
+.PHONY : test07
+
+# clean rule for target.
+CMakeFiles/test07.dir/clean:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/clean
+.PHONY : CMakeFiles/test07.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test07.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test082.dir
+
+# All Build rule for target.
+CMakeFiles/test082.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/depend
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=25,26 "Built target test082"
+.PHONY : CMakeFiles/test082.dir/all
+
+# Include target in all.
+all: CMakeFiles/test082.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test082.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test082.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test082.dir/rule
+
+# Convenience name for target.
+test082: CMakeFiles/test082.dir/rule
+
+.PHONY : test082
+
+# clean rule for target.
+CMakeFiles/test082.dir/clean:
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/clean
+.PHONY : CMakeFiles/test082.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test082.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test06.dir
+
+# All Build rule for target.
+CMakeFiles/test06.dir/all: CMakeFiles/server.dir/all
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/depend
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=19,20 "Built target test06"
+.PHONY : CMakeFiles/test06.dir/all
+
+# Include target in all.
+all: CMakeFiles/test06.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test06.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test06.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ysh/git/server/s5/build/CMakeFiles 0
+.PHONY : CMakeFiles/test06.dir/rule
+
+# Convenience name for target.
+test06: CMakeFiles/test06.dir/rule
+
+.PHONY : test06
+
+# clean rule for target.
+CMakeFiles/test06.dir/clean:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/clean
+.PHONY : CMakeFiles/test06.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test06.dir/clean
 
 .PHONY : clean
 

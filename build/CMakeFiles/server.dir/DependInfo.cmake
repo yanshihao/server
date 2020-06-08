@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ysh/git/server/s5/src/Channel.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Channel.cc.o"
   "/home/ysh/git/server/s5/src/Epoll.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Epoll.cc.o"
   "/home/ysh/git/server/s5/src/EventLoop.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/EventLoop.cc.o"
+  "/home/ysh/git/server/s5/src/Socket.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Socket.cc.o"
   "/home/ysh/git/server/s5/src/TimerQueue.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/TimerQueue.cc.o"
   "/home/ysh/git/server/s5/src/Timestamp.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Timestamp.cc.o"
   "/home/ysh/git/server/s5/src/Wakeuper.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Wakeuper.cc.o"

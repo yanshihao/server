@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/Wakeuper.cc.o"
   "CMakeFiles/server.dir/src/Timestamp.cc.o"
   "CMakeFiles/server.dir/src/TimerQueue.cc.o"
+  "CMakeFiles/server.dir/src/Socket.cc.o"
   "libserver.pdb"
   "libserver.a"
 )

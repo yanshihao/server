@@ -42,6 +42,14 @@ mutex
 Callback.h
 ../include/Callback.h
 
+../include/Socket.h
+sys/socket.h
+-
+netinet/in.h
+-
+string
+-
+
 ../include/TimerQueue.h
 Timestamp.h
 ../include/Timestamp.h
@@ -105,6 +113,30 @@ Wakeuper.h
 /home/ysh/git/server/s5/src/Wakeuper.h
 TimerQueue.h
 /home/ysh/git/server/s5/src/TimerQueue.h
+
+/home/ysh/git/server/s5/src/Socket.cc
+Socket.h
+/home/ysh/git/server/s5/src/Socket.h
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+fcntl.h
+-
+errno.h
+-
+netinet/tcp.h
+-
+string.h
+-
+arpa/inet.h
+-
+endian.h
+-
 
 /home/ysh/git/server/s5/src/TimerQueue.cc
 EventLoop.h

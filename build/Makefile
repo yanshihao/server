@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ysh/git/server/s5/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,82 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test06
+# Target rules for targets named test03
 
 # Build rule for target.
-test06: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test06
-.PHONY : test06
+test03: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test03
+.PHONY : test03
 
 # fast build rule for target.
-test06/fast:
-	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
-.PHONY : test06/fast
-
-#=============================================================================
-# Target rules for targets named test07
-
-# Build rule for target.
-test07: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test07
-.PHONY : test07
-
-# fast build rule for target.
-test07/fast:
-	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/build
-.PHONY : test07/fast
-
-#=============================================================================
-# Target rules for targets named test05
-
-# Build rule for target.
-test05: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test05
-.PHONY : test05
-
-# fast build rule for target.
-test05/fast:
-	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/build
-.PHONY : test05/fast
-
-#=============================================================================
-# Target rules for targets named test04
-
-# Build rule for target.
-test04: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test04
-.PHONY : test04
-
-# fast build rule for target.
-test04/fast:
-	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/build
-.PHONY : test04/fast
-
-#=============================================================================
-# Target rules for targets named test02
-
-# Build rule for target.
-test02: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test02
-.PHONY : test02
-
-# fast build rule for target.
-test02/fast:
-	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/build
-.PHONY : test02/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
+test03/fast:
+	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/build
+.PHONY : test03/fast
 
 #=============================================================================
 # Target rules for targets named test01
@@ -202,17 +137,108 @@ test01/fast:
 .PHONY : test01/fast
 
 #=============================================================================
-# Target rules for targets named test03
+# Target rules for targets named server
 
 # Build rule for target.
-test03: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test03
-.PHONY : test03
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-test03/fast:
-	$(MAKE) -f CMakeFiles/test03.dir/build.make CMakeFiles/test03.dir/build
-.PHONY : test03/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named test02
+
+# Build rule for target.
+test02: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test02
+.PHONY : test02
+
+# fast build rule for target.
+test02/fast:
+	$(MAKE) -f CMakeFiles/test02.dir/build.make CMakeFiles/test02.dir/build
+.PHONY : test02/fast
+
+#=============================================================================
+# Target rules for targets named test04
+
+# Build rule for target.
+test04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test04
+.PHONY : test04
+
+# fast build rule for target.
+test04/fast:
+	$(MAKE) -f CMakeFiles/test04.dir/build.make CMakeFiles/test04.dir/build
+.PHONY : test04/fast
+
+#=============================================================================
+# Target rules for targets named test05
+
+# Build rule for target.
+test05: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test05
+.PHONY : test05
+
+# fast build rule for target.
+test05/fast:
+	$(MAKE) -f CMakeFiles/test05.dir/build.make CMakeFiles/test05.dir/build
+.PHONY : test05/fast
+
+#=============================================================================
+# Target rules for targets named test081
+
+# Build rule for target.
+test081: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test081
+.PHONY : test081
+
+# fast build rule for target.
+test081/fast:
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/build
+.PHONY : test081/fast
+
+#=============================================================================
+# Target rules for targets named test07
+
+# Build rule for target.
+test07: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test07
+.PHONY : test07
+
+# fast build rule for target.
+test07/fast:
+	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/build
+.PHONY : test07/fast
+
+#=============================================================================
+# Target rules for targets named test082
+
+# Build rule for target.
+test082: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test082
+.PHONY : test082
+
+# fast build rule for target.
+test082/fast:
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/build
+.PHONY : test082/fast
+
+#=============================================================================
+# Target rules for targets named test06
+
+# Build rule for target.
+test06: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test06
+.PHONY : test06
+
+# fast build rule for target.
+test06/fast:
+	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
+.PHONY : test06/fast
 
 src/Channel.o: src/Channel.cc.o
 
@@ -294,6 +320,33 @@ src/EventLoop.s: src/EventLoop.cc.s
 src/EventLoop.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/EventLoop.cc.s
 .PHONY : src/EventLoop.cc.s
+
+src/Socket.o: src/Socket.cc.o
+
+.PHONY : src/Socket.o
+
+# target to build an object file
+src/Socket.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Socket.cc.o
+.PHONY : src/Socket.cc.o
+
+src/Socket.i: src/Socket.cc.i
+
+.PHONY : src/Socket.i
+
+# target to preprocess a source file
+src/Socket.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Socket.cc.i
+.PHONY : src/Socket.cc.i
+
+src/Socket.s: src/Socket.cc.s
+
+.PHONY : src/Socket.s
+
+# target to generate assembly for a file
+src/Socket.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Socket.cc.s
+.PHONY : src/Socket.cc.s
 
 src/TimerQueue.o: src/TimerQueue.cc.o
 
@@ -565,22 +618,78 @@ test/test07.cc.s:
 	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/test/test07.cc.s
 .PHONY : test/test07.cc.s
 
+test/test081.o: test/test081.cc.o
+
+.PHONY : test/test081.o
+
+# target to build an object file
+test/test081.cc.o:
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.o
+.PHONY : test/test081.cc.o
+
+test/test081.i: test/test081.cc.i
+
+.PHONY : test/test081.i
+
+# target to preprocess a source file
+test/test081.cc.i:
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.i
+.PHONY : test/test081.cc.i
+
+test/test081.s: test/test081.cc.s
+
+.PHONY : test/test081.s
+
+# target to generate assembly for a file
+test/test081.cc.s:
+	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.s
+.PHONY : test/test081.cc.s
+
+test/test082.o: test/test082.cc.o
+
+.PHONY : test/test082.o
+
+# target to build an object file
+test/test082.cc.o:
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.o
+.PHONY : test/test082.cc.o
+
+test/test082.i: test/test082.cc.i
+
+.PHONY : test/test082.i
+
+# target to preprocess a source file
+test/test082.cc.i:
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.i
+.PHONY : test/test082.cc.i
+
+test/test082.s: test/test082.cc.s
+
+.PHONY : test/test082.s
+
+# target to generate assembly for a file
+test/test082.cc.s:
+	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.s
+.PHONY : test/test082.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... test06"
-	@echo "... test07"
-	@echo "... test05"
-	@echo "... test04"
 	@echo "... rebuild_cache"
-	@echo "... test02"
-	@echo "... server"
-	@echo "... test01"
 	@echo "... test03"
+	@echo "... test01"
+	@echo "... server"
+	@echo "... test02"
+	@echo "... edit_cache"
+	@echo "... test04"
+	@echo "... test05"
+	@echo "... test081"
+	@echo "... test07"
+	@echo "... test082"
+	@echo "... test06"
 	@echo "... src/Channel.o"
 	@echo "... src/Channel.i"
 	@echo "... src/Channel.s"
@@ -590,6 +699,9 @@ help:
 	@echo "... src/EventLoop.o"
 	@echo "... src/EventLoop.i"
 	@echo "... src/EventLoop.s"
+	@echo "... src/Socket.o"
+	@echo "... src/Socket.i"
+	@echo "... src/Socket.s"
 	@echo "... src/TimerQueue.o"
 	@echo "... src/TimerQueue.i"
 	@echo "... src/TimerQueue.s"
@@ -620,6 +732,12 @@ help:
 	@echo "... test/test07.o"
 	@echo "... test/test07.i"
 	@echo "... test/test07.s"
+	@echo "... test/test081.o"
+	@echo "... test/test081.i"
+	@echo "... test/test081.s"
+	@echo "... test/test082.o"
+	@echo "... test/test082.i"
+	@echo "... test/test082.s"
 .PHONY : help
 
 
