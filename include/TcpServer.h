@@ -20,6 +20,12 @@ public:
     {
         connectionCallback_ = cb;
     }
+
+    void setMessageCallback(const MessageCallback& cb)
+    {
+        messageCallback_ = cb;
+    }
+    
     void start();
 private:
     void onAcceptorCallback(int fd, const InetAddr& peerAddr);

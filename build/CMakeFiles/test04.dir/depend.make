@@ -3,5 +3,6 @@
 
 CMakeFiles/test04.dir/test/test04.cc.o: ../include/Callback.h
 CMakeFiles/test04.dir/test/test04.cc.o: ../include/EventLoop.h
+CMakeFiles/test04.dir/test/test04.cc.o: ../include/Timestamp.h
 CMakeFiles/test04.dir/test/test04.cc.o: ../test/test04.cc
 

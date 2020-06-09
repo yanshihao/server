@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test12
+
+# Build rule for target.
+test12: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test12
+.PHONY : test12
+
+# fast build rule for target.
+test12/fast:
+	$(MAKE) -f CMakeFiles/test12.dir/build.make CMakeFiles/test12.dir/build
+.PHONY : test12/fast
+
+#=============================================================================
 # Target rules for targets named test03
 
 # Build rule for target.
@@ -292,6 +305,33 @@ src/Acceptor.s: src/Acceptor.cc.s
 src/Acceptor.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Acceptor.cc.s
 .PHONY : src/Acceptor.cc.s
+
+src/Buffer.o: src/Buffer.cc.o
+
+.PHONY : src/Buffer.o
+
+# target to build an object file
+src/Buffer.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Buffer.cc.o
+.PHONY : src/Buffer.cc.o
+
+src/Buffer.i: src/Buffer.cc.i
+
+.PHONY : src/Buffer.i
+
+# target to preprocess a source file
+src/Buffer.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Buffer.cc.i
+.PHONY : src/Buffer.cc.i
+
+src/Buffer.s: src/Buffer.cc.s
+
+.PHONY : src/Buffer.s
+
+# target to generate assembly for a file
+src/Buffer.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Buffer.cc.s
+.PHONY : src/Buffer.cc.s
 
 src/Channel.o: src/Channel.cc.o
 
@@ -833,6 +873,33 @@ test/test11.cc.s:
 	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test/test11.cc.s
 .PHONY : test/test11.cc.s
 
+test/test12.o: test/test12.cc.o
+
+.PHONY : test/test12.o
+
+# target to build an object file
+test/test12.cc.o:
+	$(MAKE) -f CMakeFiles/test12.dir/build.make CMakeFiles/test12.dir/test/test12.cc.o
+.PHONY : test/test12.cc.o
+
+test/test12.i: test/test12.cc.i
+
+.PHONY : test/test12.i
+
+# target to preprocess a source file
+test/test12.cc.i:
+	$(MAKE) -f CMakeFiles/test12.dir/build.make CMakeFiles/test12.dir/test/test12.cc.i
+.PHONY : test/test12.cc.i
+
+test/test12.s: test/test12.cc.s
+
+.PHONY : test/test12.s
+
+# target to generate assembly for a file
+test/test12.cc.s:
+	$(MAKE) -f CMakeFiles/test12.dir/build.make CMakeFiles/test12.dir/test/test12.cc.s
+.PHONY : test/test12.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -840,6 +907,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test12"
 	@echo "... test03"
 	@echo "... test01"
 	@echo "... test02"
@@ -856,6 +924,9 @@ help:
 	@echo "... src/Acceptor.o"
 	@echo "... src/Acceptor.i"
 	@echo "... src/Acceptor.s"
+	@echo "... src/Buffer.o"
+	@echo "... src/Buffer.i"
+	@echo "... src/Buffer.s"
 	@echo "... src/Channel.o"
 	@echo "... src/Channel.i"
 	@echo "... src/Channel.s"
@@ -916,6 +987,9 @@ help:
 	@echo "... test/test11.o"
 	@echo "... test/test11.i"
 	@echo "... test/test11.s"
+	@echo "... test/test12.o"
+	@echo "... test/test12.i"
+	@echo "... test/test12.s"
 .PHONY : help
 
 

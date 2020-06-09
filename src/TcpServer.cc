@@ -27,6 +27,7 @@ void TcpServer::onAcceptorCallback(int fd, const InetAddr& peerAddr)
     newConnectionptr->setConnectionCallback(connectionCallback_);
     newConnectionptr->setRemoveConnectionCallback(
         std::bind(&TcpServer::removeChannelCallback,this, _1));
+    newConnectionptr->setMessageCallback(messageCallback_);
     newConnectionptr->handleStartConnection();
 }
 

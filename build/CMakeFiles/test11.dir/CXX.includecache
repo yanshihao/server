@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/Buffer.h
+vector
+-
+string
+-
+
 ../include/Callback.h
 functional
 -
@@ -35,6 +41,8 @@ mutex
 -
 Callback.h
 ../include/Callback.h
+Timestamp.h
+../include/Timestamp.h
 
 ../include/Socket.h
 sys/socket.h
@@ -53,6 +61,8 @@ Socket.h
 ../include/Socket.h
 Channel.h
 ../include/Channel.h
+Buffer.h
+../include/Buffer.h
 
 ../include/TcpServer.h
 memory
@@ -62,6 +72,12 @@ Callback.h
 Socket.h
 ../include/Socket.h
 map
+-
+string
+-
+
+../include/Timestamp.h
+stdint.h
 -
 string
 -

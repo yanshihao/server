@@ -16,6 +16,7 @@ src/Socket.cc
 src/Acceptor.cc
 src/TcpServer.cc
 src/TcpConnection.cc
+src/Buffer.cc
 )
 
 add_executable(test01 test/test01.cc)
@@ -50,3 +51,6 @@ target_link_libraries(test10 -lpthread server)
 
 add_executable(test11 test/test11.cc)
 target_link_libraries(test11 -lpthread server)
+
+add_executable(test12 test/test12.cc)
+target_link_libraries(test12 -lpthread server)

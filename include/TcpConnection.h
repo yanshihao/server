@@ -3,6 +3,8 @@
 #include <memory>
 #include "Socket.h"
 #include "Channel.h"
+#include "Buffer.h"
+
 class EventLoop;
 class Channel;
 
@@ -27,6 +29,11 @@ public:
         removeConnectionCallback_ = cb;
     }
 
+    void setMessageCallback(const MessageCallback& cb)
+    {
+        messageCallback_ = cb;
+    }
+
     void handleStartConnection();
 
     const InetAddr& getPeerAddr() const {return peerAddr_;}
@@ -38,6 +45,8 @@ private:
     void assertInThisLoop();
 
     void handleRead();
+
+    void handleError() {};
 
     void handleKillConnection();
     
@@ -57,11 +66,12 @@ private:
     InetAddr peerAddr_;
     InetAddr localAddr_;
 
-    std::string inputbuf;
-    std::string outputbuf;
+    Buffer inputBuffer_;
+    Buffer outputBuffer_;
 
     Channel channel_;
 
     ConnectionCallback connectionCallback_;
     RemoveConnectionCallback removeConnectionCallback_;
+    MessageCallback messageCallback_;
 };

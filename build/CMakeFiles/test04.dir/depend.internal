@@ -4,4 +4,5 @@
 CMakeFiles/test04.dir/test/test04.cc.o
  ../include/Callback.h
  ../include/EventLoop.h
+ ../include/Timestamp.h
  /home/ysh/git/server/s5/test/test04.cc

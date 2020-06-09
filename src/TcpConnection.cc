@@ -5,7 +5,7 @@
 #include <functional>
 #include <assert.h>
 #include <unistd.h>
-
+#include "Timestamp.h"
 TcpConnection::TcpConnection(EventLoop* loop, int fd)
 :state_(Kconnecting), loop_(loop),fd_(fd),
 socket_(fd), peerAddr_(sockets::getPeerAddr(fd)), 
@@ -52,15 +52,19 @@ TcpConnection::~TcpConnection()
 
 void TcpConnection::handleRead()
 {
-    char buf[1024];
-    ssize_t n = ::read(fd_,buf,sizeof(buf));
+    int saveErrno;
+    size_t n = inputBuffer_.readFd(fd_, &saveErrno);
     if(n == 0)
     {
         handleKillConnection();
     }
+    else if(n > 0)
+    {
+        messageCallback_(shared_from_this(),&inputBuffer_, Timestamp::now());   
+    }
     else
     {
-        printf("%s", buf);
+        errno = saveErrno;
+        handleError();
     }
-    
 }

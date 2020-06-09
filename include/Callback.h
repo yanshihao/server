@@ -3,9 +3,9 @@
 #include <vector>
 #include <unordered_map>
 class TcpConnection;
+class InetAddr;
 class Buffer;
 class Timestamp;
-class InetAddr;
 typedef std::function <void ()>  Callback;
 typedef std::shared_ptr<TcpConnection>  TcpConnectionPtr;
 
@@ -18,8 +18,7 @@ typedef std::shared_ptr<TcpConnection>  TcpConnectionPtr;
 typedef std::function<void (const TcpConnectionPtr&)>  ConnectionCallback;
 
 // 当有消息到来时的回调函数，主要用来处理信息
-typedef std::function<void (const TcpConnectionPtr&, 
-                    Buffer* buffer, const Timestamp&)> MessageCallback;
+typedef std::function<void (const TcpConnectionPtr&, Buffer*, Timestamp)> MessageCallback;
 
 // 当发送完毕时的回调函数，主要用来显示消息或者进一步动作
 typedef std::function<void (const TcpConnection&)> WriteCompleteCallback;

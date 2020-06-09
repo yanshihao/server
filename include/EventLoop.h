@@ -5,6 +5,7 @@
 #include <memory>
 #include <mutex>
 #include "Callback.h"
+#include "Timestamp.h"
 class Epoll;
 class Channel;
 class Wakeuper;

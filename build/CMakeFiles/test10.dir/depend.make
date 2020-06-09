@@ -6,5 +6,6 @@ CMakeFiles/test10.dir/test/test10.cc.o: ../include/Callback.h
 CMakeFiles/test10.dir/test/test10.cc.o: ../include/Channel.h
 CMakeFiles/test10.dir/test/test10.cc.o: ../include/EventLoop.h
 CMakeFiles/test10.dir/test/test10.cc.o: ../include/Socket.h
+CMakeFiles/test10.dir/test/test10.cc.o: ../include/Timestamp.h
 CMakeFiles/test10.dir/test/test10.cc.o: ../test/test10.cc
 
