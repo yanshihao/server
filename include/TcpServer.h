@@ -25,7 +25,12 @@ public:
     {
         messageCallback_ = cb;
     }
-    
+
+    void setWriteCompleteCallback(const WriteCompleteCallback& cb)
+    {
+        writeCompleteCallback_ = cb;
+    }
+
     void start();
 private:
     void onAcceptorCallback(int fd, const InetAddr& peerAddr);

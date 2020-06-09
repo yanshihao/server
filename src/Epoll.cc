@@ -64,6 +64,7 @@ void Epoll::updateChannel(Channel* channel)
     newEvent.events = channel->getEvents();
 
     // 存在则更新
+    printf("%d\n",fd);
     if(channelMap_.find(fd) != channelMap_.end())
     {
         assert(channelMap_[fd] == channel);

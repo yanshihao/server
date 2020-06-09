@@ -21,7 +21,7 @@ typedef std::function<void (const TcpConnectionPtr&)>  ConnectionCallback;
 typedef std::function<void (const TcpConnectionPtr&, Buffer*, Timestamp)> MessageCallback;
 
 // 当发送完毕时的回调函数，主要用来显示消息或者进一步动作
-typedef std::function<void (const TcpConnection&)> WriteCompleteCallback;
+typedef std::function<void (const TcpConnectionPtr&)> WriteCompleteCallback;
 
 class Channel;
 typedef std::vector<Channel*>  ChannelList;

@@ -44,7 +44,7 @@ void Buffer::append(const char* str, size_t len)
     // 首先腾出空间
     if(writableBytes() < len)
     {
-        makeRoom(len - writableBytes());
+        makeRoom(len);
     }
 
     // 然后复制
@@ -59,9 +59,11 @@ void Buffer::makeRoom(size_t len)
 {
     // 分两种情况讨论，一种是有足够空间当时在前面
     // 一种是没有足够空间
+    printf("%ld      %ld \n", buffer_.size(), len);
     if(writableBytes() + readIndex_ < len)
     {
         // 没有足够空间
+        printf("%ld      %ld \n", buffer_.size(), len);
         std::vector<char> newbuf(writeIndex_ + len);
         std::copy(begin() + readIndex_, begin()+ writeIndex_, &*newbuf.begin());
         std::swap(newbuf, buffer_);
@@ -87,10 +89,16 @@ size_t Buffer::readFd(int fd, int* saveErrno)
     vec[1].iov_base = extrabuf;
     vec[1].iov_len = sizeof(extrabuf);
 
-    size_t n = ::readv(fd, vec,sizeof(vec));
-    if(n < 0)
+    int n = ::readv(fd, vec,2);
+    printf("n = %d\n", n);
+    if( n < 0 )
     {
+        perror("readv");
         *saveErrno = errno;
+    }
+    else if(n == 0)
+    {
+        ;
     }
     else if( n <= writableBytes())
     {

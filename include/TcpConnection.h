@@ -34,6 +34,11 @@ public:
         messageCallback_ = cb;
     }
 
+    void setWriteCompleteCallback(const WriteCompleteCallback& cb)
+    {
+        writeCompleteCallback_ = cb;
+    }
+
     void handleStartConnection();
 
     const InetAddr& getPeerAddr() const {return peerAddr_;}
@@ -41,21 +46,31 @@ public:
     bool IsConnecting() const {return state_ == Kconnecting;}
     bool isDisConnecting() const {return state_ == KdisConnected;}
 
+    void send(const std::string& str);
+    void shutdown();
+
 private:
-    void assertInThisLoop();
+    void assertInThisThread();
+    bool inThisThread();
+
+    void sendInLoop(std::string str);
+
+    void shutdownInLoop();
 
     void handleRead();
 
+    void handleWrite();
     void handleError() {};
 
     void handleKillConnection();
     
     enum State{
         Kconnecting, Kconnected, 
-        Kdisconnecting,KdisConnected
+        Kdisconnecting,KdisConnected,
     };
 
     State state_;
+    bool writing_;
 
     EventLoop* loop_;
     
@@ -74,4 +89,5 @@ private:
     ConnectionCallback connectionCallback_;
     RemoveConnectionCallback removeConnectionCallback_;
     MessageCallback messageCallback_;
+    WriteCompleteCallback writeCompleteCallback_;
 };

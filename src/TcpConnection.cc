@@ -9,10 +9,14 @@
 TcpConnection::TcpConnection(EventLoop* loop, int fd)
 :state_(Kconnecting), loop_(loop),fd_(fd),
 socket_(fd), peerAddr_(sockets::getPeerAddr(fd)), 
-localAddr_(sockets::getLocalAddr(fd)), channel_(loop,fd)
+localAddr_(sockets::getLocalAddr(fd)), channel_(loop,fd),
+writing_(false)
 {
     channel_.setReadCallback(
         std::bind(&TcpConnection::handleRead, this)
+    );
+    channel_.setWriteCallback(
+        std::bind(&TcpConnection::handleWrite,this)
     );
     channel_.setReadable();
 }
@@ -20,7 +24,7 @@ localAddr_(sockets::getLocalAddr(fd)), channel_(loop,fd)
 void TcpConnection::handleStartConnection()
 {
     assert(state_ == Kconnecting);
-    assertInThisLoop();
+    assertInThisThread();
 
     if(connectionCallback_)
         connectionCallback_(shared_from_this());
@@ -29,7 +33,7 @@ void TcpConnection::handleStartConnection()
 }
 
 
-void TcpConnection::assertInThisLoop()
+void TcpConnection::assertInThisThread()
 {
     loop_->assertInThisThread();
 }
@@ -53,7 +57,7 @@ TcpConnection::~TcpConnection()
 void TcpConnection::handleRead()
 {
     int saveErrno;
-    size_t n = inputBuffer_.readFd(fd_, &saveErrno);
+    int n = inputBuffer_.readFd(fd_, &saveErrno);
     if(n == 0)
     {
         handleKillConnection();
@@ -65,6 +69,87 @@ void TcpConnection::handleRead()
     else
     {
         errno = saveErrno;
+        handleKillConnection();
+    }
+}
+
+bool TcpConnection::inThisThread()
+{
+    return loop_->inThisThread();
+}
+
+void TcpConnection::send(const std::string& str)
+{
+    if(inThisThread())
+    {
+        sendInLoop(str);
+    }
+    else
+    {
+        loop_->queueInLoop(
+            std::bind(&TcpConnection::sendInLoop, this, str)
+        );   
+    }
+}
+
+void TcpConnection::sendInLoop(std::string str)
+{
+    assertInThisThread();
+    if(state_ == Kdisconnecting)
+    {
+        return;
+    }
+    
+    if(writing_ == true)
+    {
+        outputBuffer_.append(str);
+    }
+    else
+    {
+        int n = ::write(fd_,str.c_str(),str.size());
+        if(n == -1)
+        {
+            handleError();
+        }
+        else if(n == str.size())
+        {
+            // 写完全，需要调用写完整函数
+            if(writeCompleteCallback_)
+                writeCompleteCallback_(shared_from_this());
+        }
+        else
+        {
+            outputBuffer_.append(str.c_str() + n, str.size() - n);
+            // 需要监控可写事件
+            channel_.setWritable();
+            writing_ = true;
+        }
+    }
+}
+
+void TcpConnection::handleWrite()
+{
+    assert(outputBuffer_.readableBytes() > 0);
+    assert(writing_ == true);
+    if(state_ == Kdisconnecting)
+    {
+        return;
+    }
+
+    int n = ::write(fd_, outputBuffer_.peek(), outputBuffer_.readableBytes());
+    if(n == -1)
+    {
         handleError();
+    }
+    else
+    {
+        outputBuffer_.retrieve(n);
+        if(outputBuffer_.readableBytes() == 0)
+        {
+            channel_.setUnWritable();
+            writing_ = false;
+            if(writeCompleteCallback_)
+                writeCompleteCallback_(shared_from_this());
+        }
     }
 }
