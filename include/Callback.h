@@ -15,7 +15,7 @@ typedef std::shared_ptr<TcpConnection>  TcpConnectionPtr;
 // 所以外层封装需要提供这几个函数的设置接口
 
 // 建立连接和断开连接时调用的回调函数，主要用于信息显示
-typedef std::function<void (const TcpConnection&)>  ConnectionCallback;
+typedef std::function<void (const TcpConnectionPtr&)>  ConnectionCallback;
 
 // 当有消息到来时的回调函数，主要用来处理信息
 typedef std::function<void (const TcpConnectionPtr&, 
@@ -29,3 +29,5 @@ typedef std::vector<Channel*>  ChannelList;
 typedef std::unordered_map<int, Channel*> ChannelMap;
 
 typedef std::function<void (int, const InetAddr&)>  AcceptorCallback;
+
+typedef std::function<void (TcpConnectionPtr) >  RemoveConnectionCallback;

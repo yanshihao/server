@@ -249,6 +249,54 @@ CMakeFiles/server.dir/src/Acceptor.cc.o.provides: CMakeFiles/server.dir/src/Acce
 CMakeFiles/server.dir/src/Acceptor.cc.o.provides.build: CMakeFiles/server.dir/src/Acceptor.cc.o
 
 
+CMakeFiles/server.dir/src/TcpServer.cc.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/TcpServer.cc.o: ../src/TcpServer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/server.dir/src/TcpServer.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/src/TcpServer.cc.o -c /home/ysh/git/server/s5/src/TcpServer.cc
+
+CMakeFiles/server.dir/src/TcpServer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/src/TcpServer.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ysh/git/server/s5/src/TcpServer.cc > CMakeFiles/server.dir/src/TcpServer.cc.i
+
+CMakeFiles/server.dir/src/TcpServer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/TcpServer.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ysh/git/server/s5/src/TcpServer.cc -o CMakeFiles/server.dir/src/TcpServer.cc.s
+
+CMakeFiles/server.dir/src/TcpServer.cc.o.requires:
+
+.PHONY : CMakeFiles/server.dir/src/TcpServer.cc.o.requires
+
+CMakeFiles/server.dir/src/TcpServer.cc.o.provides: CMakeFiles/server.dir/src/TcpServer.cc.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpServer.cc.o.provides.build
+.PHONY : CMakeFiles/server.dir/src/TcpServer.cc.o.provides
+
+CMakeFiles/server.dir/src/TcpServer.cc.o.provides.build: CMakeFiles/server.dir/src/TcpServer.cc.o
+
+
+CMakeFiles/server.dir/src/TcpConnection.cc.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/TcpConnection.cc.o: ../src/TcpConnection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/server.dir/src/TcpConnection.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/src/TcpConnection.cc.o -c /home/ysh/git/server/s5/src/TcpConnection.cc
+
+CMakeFiles/server.dir/src/TcpConnection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/src/TcpConnection.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ysh/git/server/s5/src/TcpConnection.cc > CMakeFiles/server.dir/src/TcpConnection.cc.i
+
+CMakeFiles/server.dir/src/TcpConnection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/TcpConnection.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ysh/git/server/s5/src/TcpConnection.cc -o CMakeFiles/server.dir/src/TcpConnection.cc.s
+
+CMakeFiles/server.dir/src/TcpConnection.cc.o.requires:
+
+.PHONY : CMakeFiles/server.dir/src/TcpConnection.cc.o.requires
+
+CMakeFiles/server.dir/src/TcpConnection.cc.o.provides: CMakeFiles/server.dir/src/TcpConnection.cc.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpConnection.cc.o.provides.build
+.PHONY : CMakeFiles/server.dir/src/TcpConnection.cc.o.provides
+
+CMakeFiles/server.dir/src/TcpConnection.cc.o.provides.build: CMakeFiles/server.dir/src/TcpConnection.cc.o
+
+
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/src/EventLoop.cc.o" \
@@ -258,7 +306,9 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/src/Timestamp.cc.o" \
 "CMakeFiles/server.dir/src/TimerQueue.cc.o" \
 "CMakeFiles/server.dir/src/Socket.cc.o" \
-"CMakeFiles/server.dir/src/Acceptor.cc.o"
+"CMakeFiles/server.dir/src/Acceptor.cc.o" \
+"CMakeFiles/server.dir/src/TcpServer.cc.o" \
+"CMakeFiles/server.dir/src/TcpConnection.cc.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -271,9 +321,11 @@ libserver.a: CMakeFiles/server.dir/src/Timestamp.cc.o
 libserver.a: CMakeFiles/server.dir/src/TimerQueue.cc.o
 libserver.a: CMakeFiles/server.dir/src/Socket.cc.o
 libserver.a: CMakeFiles/server.dir/src/Acceptor.cc.o
+libserver.a: CMakeFiles/server.dir/src/TcpServer.cc.o
+libserver.a: CMakeFiles/server.dir/src/TcpConnection.cc.o
 libserver.a: CMakeFiles/server.dir/build.make
 libserver.a: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libserver.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libserver.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
@@ -290,6 +342,8 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/Timestamp.cc.o.require
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/TimerQueue.cc.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/Socket.cc.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/Acceptor.cc.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/TcpServer.cc.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/src/TcpConnection.cc.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 

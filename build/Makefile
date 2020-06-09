@@ -137,19 +137,6 @@ test01/fast:
 .PHONY : test01/fast
 
 #=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-#=============================================================================
 # Target rules for targets named test02
 
 # Build rule for target.
@@ -176,6 +163,19 @@ test04/fast:
 .PHONY : test04/fast
 
 #=============================================================================
+# Target rules for targets named test11
+
+# Build rule for target.
+test11: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test11
+.PHONY : test11
+
+# fast build rule for target.
+test11/fast:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/build
+.PHONY : test11/fast
+
+#=============================================================================
 # Target rules for targets named test05
 
 # Build rule for target.
@@ -189,17 +189,17 @@ test05/fast:
 .PHONY : test05/fast
 
 #=============================================================================
-# Target rules for targets named test081
+# Target rules for targets named test10
 
 # Build rule for target.
-test081: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test081
-.PHONY : test081
+test10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test10
+.PHONY : test10
 
 # fast build rule for target.
-test081/fast:
-	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/build
-.PHONY : test081/fast
+test10/fast:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/build
+.PHONY : test10/fast
 
 #=============================================================================
 # Target rules for targets named test07
@@ -215,30 +215,30 @@ test07/fast:
 .PHONY : test07/fast
 
 #=============================================================================
-# Target rules for targets named test082
+# Target rules for targets named server
 
 # Build rule for target.
-test082: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test082
-.PHONY : test082
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-test082/fast:
-	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/build
-.PHONY : test082/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 #=============================================================================
-# Target rules for targets named test09
+# Target rules for targets named test08
 
 # Build rule for target.
-test09: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test09
-.PHONY : test09
+test08: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test08
+.PHONY : test08
 
 # fast build rule for target.
-test09/fast:
-	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/build
-.PHONY : test09/fast
+test08/fast:
+	$(MAKE) -f CMakeFiles/test08.dir/build.make CMakeFiles/test08.dir/build
+.PHONY : test08/fast
 
 #=============================================================================
 # Target rules for targets named test06
@@ -252,6 +252,19 @@ test06: cmake_check_build_system
 test06/fast:
 	$(MAKE) -f CMakeFiles/test06.dir/build.make CMakeFiles/test06.dir/build
 .PHONY : test06/fast
+
+#=============================================================================
+# Target rules for targets named test09
+
+# Build rule for target.
+test09: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test09
+.PHONY : test09
+
+# fast build rule for target.
+test09/fast:
+	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/build
+.PHONY : test09/fast
 
 src/Acceptor.o: src/Acceptor.cc.o
 
@@ -387,6 +400,60 @@ src/Socket.s: src/Socket.cc.s
 src/Socket.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Socket.cc.s
 .PHONY : src/Socket.cc.s
+
+src/TcpConnection.o: src/TcpConnection.cc.o
+
+.PHONY : src/TcpConnection.o
+
+# target to build an object file
+src/TcpConnection.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpConnection.cc.o
+.PHONY : src/TcpConnection.cc.o
+
+src/TcpConnection.i: src/TcpConnection.cc.i
+
+.PHONY : src/TcpConnection.i
+
+# target to preprocess a source file
+src/TcpConnection.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpConnection.cc.i
+.PHONY : src/TcpConnection.cc.i
+
+src/TcpConnection.s: src/TcpConnection.cc.s
+
+.PHONY : src/TcpConnection.s
+
+# target to generate assembly for a file
+src/TcpConnection.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpConnection.cc.s
+.PHONY : src/TcpConnection.cc.s
+
+src/TcpServer.o: src/TcpServer.cc.o
+
+.PHONY : src/TcpServer.o
+
+# target to build an object file
+src/TcpServer.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpServer.cc.o
+.PHONY : src/TcpServer.cc.o
+
+src/TcpServer.i: src/TcpServer.cc.i
+
+.PHONY : src/TcpServer.i
+
+# target to preprocess a source file
+src/TcpServer.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpServer.cc.i
+.PHONY : src/TcpServer.cc.i
+
+src/TcpServer.s: src/TcpServer.cc.s
+
+.PHONY : src/TcpServer.s
+
+# target to generate assembly for a file
+src/TcpServer.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TcpServer.cc.s
+.PHONY : src/TcpServer.cc.s
 
 src/TimerQueue.o: src/TimerQueue.cc.o
 
@@ -658,59 +725,32 @@ test/test07.cc.s:
 	$(MAKE) -f CMakeFiles/test07.dir/build.make CMakeFiles/test07.dir/test/test07.cc.s
 .PHONY : test/test07.cc.s
 
-test/test081.o: test/test081.cc.o
+test/test08.o: test/test08.cc.o
 
-.PHONY : test/test081.o
-
-# target to build an object file
-test/test081.cc.o:
-	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.o
-.PHONY : test/test081.cc.o
-
-test/test081.i: test/test081.cc.i
-
-.PHONY : test/test081.i
-
-# target to preprocess a source file
-test/test081.cc.i:
-	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.i
-.PHONY : test/test081.cc.i
-
-test/test081.s: test/test081.cc.s
-
-.PHONY : test/test081.s
-
-# target to generate assembly for a file
-test/test081.cc.s:
-	$(MAKE) -f CMakeFiles/test081.dir/build.make CMakeFiles/test081.dir/test/test081.cc.s
-.PHONY : test/test081.cc.s
-
-test/test082.o: test/test082.cc.o
-
-.PHONY : test/test082.o
+.PHONY : test/test08.o
 
 # target to build an object file
-test/test082.cc.o:
-	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.o
-.PHONY : test/test082.cc.o
+test/test08.cc.o:
+	$(MAKE) -f CMakeFiles/test08.dir/build.make CMakeFiles/test08.dir/test/test08.cc.o
+.PHONY : test/test08.cc.o
 
-test/test082.i: test/test082.cc.i
+test/test08.i: test/test08.cc.i
 
-.PHONY : test/test082.i
+.PHONY : test/test08.i
 
 # target to preprocess a source file
-test/test082.cc.i:
-	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.i
-.PHONY : test/test082.cc.i
+test/test08.cc.i:
+	$(MAKE) -f CMakeFiles/test08.dir/build.make CMakeFiles/test08.dir/test/test08.cc.i
+.PHONY : test/test08.cc.i
 
-test/test082.s: test/test082.cc.s
+test/test08.s: test/test08.cc.s
 
-.PHONY : test/test082.s
+.PHONY : test/test08.s
 
 # target to generate assembly for a file
-test/test082.cc.s:
-	$(MAKE) -f CMakeFiles/test082.dir/build.make CMakeFiles/test082.dir/test/test082.cc.s
-.PHONY : test/test082.cc.s
+test/test08.cc.s:
+	$(MAKE) -f CMakeFiles/test08.dir/build.make CMakeFiles/test08.dir/test/test08.cc.s
+.PHONY : test/test08.cc.s
 
 test/test09.o: test/test09.cc.o
 
@@ -739,6 +779,60 @@ test/test09.cc.s:
 	$(MAKE) -f CMakeFiles/test09.dir/build.make CMakeFiles/test09.dir/test/test09.cc.s
 .PHONY : test/test09.cc.s
 
+test/test10.o: test/test10.cc.o
+
+.PHONY : test/test10.o
+
+# target to build an object file
+test/test10.cc.o:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test/test10.cc.o
+.PHONY : test/test10.cc.o
+
+test/test10.i: test/test10.cc.i
+
+.PHONY : test/test10.i
+
+# target to preprocess a source file
+test/test10.cc.i:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test/test10.cc.i
+.PHONY : test/test10.cc.i
+
+test/test10.s: test/test10.cc.s
+
+.PHONY : test/test10.s
+
+# target to generate assembly for a file
+test/test10.cc.s:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test/test10.cc.s
+.PHONY : test/test10.cc.s
+
+test/test11.o: test/test11.cc.o
+
+.PHONY : test/test11.o
+
+# target to build an object file
+test/test11.cc.o:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test/test11.cc.o
+.PHONY : test/test11.cc.o
+
+test/test11.i: test/test11.cc.i
+
+.PHONY : test/test11.i
+
+# target to preprocess a source file
+test/test11.cc.i:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test/test11.cc.i
+.PHONY : test/test11.cc.i
+
+test/test11.s: test/test11.cc.s
+
+.PHONY : test/test11.s
+
+# target to generate assembly for a file
+test/test11.cc.s:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test/test11.cc.s
+.PHONY : test/test11.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -748,16 +842,17 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test03"
 	@echo "... test01"
-	@echo "... server"
 	@echo "... test02"
 	@echo "... edit_cache"
 	@echo "... test04"
+	@echo "... test11"
 	@echo "... test05"
-	@echo "... test081"
+	@echo "... test10"
 	@echo "... test07"
-	@echo "... test082"
-	@echo "... test09"
+	@echo "... server"
+	@echo "... test08"
 	@echo "... test06"
+	@echo "... test09"
 	@echo "... src/Acceptor.o"
 	@echo "... src/Acceptor.i"
 	@echo "... src/Acceptor.s"
@@ -773,6 +868,12 @@ help:
 	@echo "... src/Socket.o"
 	@echo "... src/Socket.i"
 	@echo "... src/Socket.s"
+	@echo "... src/TcpConnection.o"
+	@echo "... src/TcpConnection.i"
+	@echo "... src/TcpConnection.s"
+	@echo "... src/TcpServer.o"
+	@echo "... src/TcpServer.i"
+	@echo "... src/TcpServer.s"
 	@echo "... src/TimerQueue.o"
 	@echo "... src/TimerQueue.i"
 	@echo "... src/TimerQueue.s"
@@ -803,15 +904,18 @@ help:
 	@echo "... test/test07.o"
 	@echo "... test/test07.i"
 	@echo "... test/test07.s"
-	@echo "... test/test081.o"
-	@echo "... test/test081.i"
-	@echo "... test/test081.s"
-	@echo "... test/test082.o"
-	@echo "... test/test082.i"
-	@echo "... test/test082.s"
+	@echo "... test/test08.o"
+	@echo "... test/test08.i"
+	@echo "... test/test08.s"
 	@echo "... test/test09.o"
 	@echo "... test/test09.i"
 	@echo "... test/test09.s"
+	@echo "... test/test10.o"
+	@echo "... test/test10.i"
+	@echo "... test/test10.s"
+	@echo "... test/test11.o"
+	@echo "... test/test11.i"
+	@echo "... test/test11.s"
 .PHONY : help
 
 

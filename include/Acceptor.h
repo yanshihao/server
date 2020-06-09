@@ -11,6 +11,8 @@ public:
     Acceptor(EventLoop* loop, const InetAddr& addr);
     ~Acceptor();
 
+    void start();
+
     void setAccptorCallback(const AcceptorCallback& cb)
     {
         acceptorCallback_ = cb;

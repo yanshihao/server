@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/TimerQueue.cc.o"
   "CMakeFiles/server.dir/src/Socket.cc.o"
   "CMakeFiles/server.dir/src/Acceptor.cc.o"
+  "CMakeFiles/server.dir/src/TcpServer.cc.o"
+  "CMakeFiles/server.dir/src/TcpConnection.cc.o"
   "libserver.pdb"
   "libserver.a"
 )

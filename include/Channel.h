@@ -54,10 +54,6 @@ public:
         errorCallback_ = cb;
     }
 
-    void setCloseCallback(const Callback& cb)
-    {
-        closeCallback_ = cb;
-    }
     void setReadable();
     void setWritable();
     void setUnWritable();
@@ -77,6 +73,5 @@ private:
     Callback readCallback_;
     Callback writeCallback_;
     Callback errorCallback_;
-    Callback closeCallback_;
     bool handlework_;
 };

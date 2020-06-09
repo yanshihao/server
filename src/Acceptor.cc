@@ -8,6 +8,10 @@ Acceptor::Acceptor(EventLoop* loop, const InetAddr& addr)
 listenSocket_(listenfd_), localAddr_(addr)
 ,channel_(loop, listenfd_)
 {
+}
+
+void Acceptor::start()
+{
     listenSocket_.bind(localAddr_);
     listenSocket_.listen();
     channel_.setReadCallback(

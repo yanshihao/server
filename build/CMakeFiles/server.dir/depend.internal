@@ -31,6 +31,22 @@ CMakeFiles/server.dir/src/EventLoop.cc.o
 CMakeFiles/server.dir/src/Socket.cc.o
  ../include/Socket.h
  /home/ysh/git/server/s5/src/Socket.cc
+CMakeFiles/server.dir/src/TcpConnection.cc.o
+ ../include/Callback.h
+ ../include/Channel.h
+ ../include/EventLoop.h
+ ../include/Socket.h
+ ../include/TcpConnection.h
+ /home/ysh/git/server/s5/src/TcpConnection.cc
+CMakeFiles/server.dir/src/TcpServer.cc.o
+ ../include/Acceptor.h
+ ../include/Callback.h
+ ../include/Channel.h
+ ../include/EventLoop.h
+ ../include/Socket.h
+ ../include/TcpConnection.h
+ ../include/TcpServer.h
+ /home/ysh/git/server/s5/src/TcpServer.cc
 CMakeFiles/server.dir/src/TimerQueue.cc.o
  ../include/Callback.h
  ../include/Channel.h

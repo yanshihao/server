@@ -28,19 +28,11 @@ void Channel::handle()
     if(revents_ & EPOLLERR)
     {
         if(errorCallback_) errorCallback_();
-    }  // 处理对端断开
-    else if((revents_ & EPOLLIN) && ( revents_ & EPOLLRDHUP))
-    {
-        if(closeCallback_) closeCallback_();
     }
-    else
-    {
-        if(revents_ & EPOLLIN)
-            if(readCallback_) readCallback_();
-        if(revents_ & EPOLLOUT)
-            if(writeCallback_) writeCallback_();
-    }
-
+    if(revents_ & EPOLLIN)
+        if(readCallback_) readCallback_();
+    if(revents_ & EPOLLOUT)
+        if(writeCallback_) writeCallback_();
     handlework_ = false;
 }
 
