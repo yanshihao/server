@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/test14.dir/test/test14.cc.o  -o test14 libserver.a -lpthread 

@@ -17,6 +17,8 @@ src/Acceptor.cc
 src/TcpServer.cc
 src/TcpConnection.cc
 src/Buffer.cc
+src/EventLoopThread.cc
+src/EventLoopThreadPool.cc
 )
 
 add_executable(test01 test/test01.cc)
@@ -58,3 +60,9 @@ target_link_libraries(test12 -lpthread server)
 
 add_executable(test13 test/test13.cc)
 target_link_libraries(test13 -lpthread server)
+
+add_executable(test14 test/test14.cc)
+target_link_libraries(test14 server -lpthread)
+
+add_executable(test15 test/test15.cc)
+target_link_libraries(test15 server -lpthread)

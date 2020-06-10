@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ysh/git/server/s5/src/Channel.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Channel.cc.o"
   "/home/ysh/git/server/s5/src/Epoll.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Epoll.cc.o"
   "/home/ysh/git/server/s5/src/EventLoop.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/EventLoop.cc.o"
+  "/home/ysh/git/server/s5/src/EventLoopThread.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/EventLoopThread.cc.o"
+  "/home/ysh/git/server/s5/src/EventLoopThreadPool.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o"
   "/home/ysh/git/server/s5/src/Socket.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/Socket.cc.o"
   "/home/ysh/git/server/s5/src/TcpConnection.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/TcpConnection.cc.o"
   "/home/ysh/git/server/s5/src/TcpServer.cc" "/home/ysh/git/server/s5/build/CMakeFiles/server.dir/src/TcpServer.cc.o"

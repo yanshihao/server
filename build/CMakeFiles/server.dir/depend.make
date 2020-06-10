@@ -34,6 +34,19 @@ CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Timestamp.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../include/Wakeuper.h
 CMakeFiles/server.dir/src/EventLoop.cc.o: ../src/EventLoop.cc
 
+CMakeFiles/server.dir/src/EventLoopThread.cc.o: ../include/Callback.h
+CMakeFiles/server.dir/src/EventLoopThread.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/EventLoopThread.cc.o: ../include/EventLoopThread.h
+CMakeFiles/server.dir/src/EventLoopThread.cc.o: ../include/Timestamp.h
+CMakeFiles/server.dir/src/EventLoopThread.cc.o: ../src/EventLoopThread.cc
+
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../include/Callback.h
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../include/EventLoopThread.h
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../include/EventLoopThreadPool.h
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../include/Timestamp.h
+CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o: ../src/EventLoopThreadPool.cc
+
 CMakeFiles/server.dir/src/Socket.cc.o: ../include/Socket.h
 CMakeFiles/server.dir/src/Socket.cc.o: ../src/Socket.cc
 

@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/TcpServer.cc.o"
   "CMakeFiles/server.dir/src/TcpConnection.cc.o"
   "CMakeFiles/server.dir/src/Buffer.cc.o"
+  "CMakeFiles/server.dir/src/EventLoopThread.cc.o"
+  "CMakeFiles/server.dir/src/EventLoopThreadPool.cc.o"
   "libserver.pdb"
   "libserver.a"
 )
