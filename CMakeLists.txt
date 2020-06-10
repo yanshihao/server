@@ -22,47 +22,49 @@ src/EventLoopThreadPool.cc
 )
 
 add_executable(test01 test/test01.cc)
-target_link_libraries( test01 -lpthread server)
+target_link_libraries( test01 server -lpthread )
 
 add_executable(test02 test/test02.cc)
-target_link_libraries( test02 -lpthread server)
+target_link_libraries( test02 server -lpthread )
 
 add_executable(test03 test/test03.cc)
-target_link_libraries( test03 -lpthread server)
+target_link_libraries( test03 server -lpthread )
 
 add_executable(test04 test/test04.cc)
-target_link_libraries( test04 -lpthread server)
+target_link_libraries( test04 server -lpthread )
 
 add_executable(test05 test/test05.cc)
-target_link_libraries(test05 -lpthread server)
+target_link_libraries(test05 server -lpthread )
 
 add_executable(test06 test/test06.cc)
-target_link_libraries(test06 -lpthread server)
+target_link_libraries(test06 server -lpthread )
 
 add_executable(test07 test/test07.cc)
-target_link_libraries(test07 -lpthread server)
+target_link_libraries(test07 server -lpthread )
 
 add_executable(test08 test/test08.cc)
-target_link_libraries(test08 -lpthread server)
+target_link_libraries(test08 server -lpthread )
 
 add_executable(test09 test/test09.cc)
-target_link_libraries(test09 -lpthread server)
+target_link_libraries(test09 server -lpthread )
 
 add_executable(test10 test/test10.cc)
-target_link_libraries(test10 -lpthread server)
+target_link_libraries(test10 server -lpthread )
 
 add_executable(test11 test/test11.cc)
-target_link_libraries(test11 -lpthread server)
+target_link_libraries(test11 server -lpthread )
 
 add_executable(test12 test/test12.cc)
-target_link_libraries(test12 -lpthread server)
-
+target_link_libraries(test12 server -lpthread )
 
 add_executable(test13 test/test13.cc)
-target_link_libraries(test13 -lpthread server)
+target_link_libraries(test13 server -lpthread )
 
 add_executable(test14 test/test14.cc)
 target_link_libraries(test14 server -lpthread)
 
 add_executable(test15 test/test15.cc)
 target_link_libraries(test15 server -lpthread)
+
+add_executable(test16 test/test16.cc)
+target_link_libraries(test16 server -lpthread)

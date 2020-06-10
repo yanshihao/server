@@ -5,6 +5,8 @@ CMakeFiles/test12.dir/test/test12.cc.o: ../include/Buffer.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/Callback.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/Channel.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/EventLoop.h
+CMakeFiles/test12.dir/test/test12.cc.o: ../include/EventLoopThread.h
+CMakeFiles/test12.dir/test/test12.cc.o: ../include/EventLoopThreadPool.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/Socket.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/TcpConnection.h
 CMakeFiles/test12.dir/test/test12.cc.o: ../include/TcpServer.h

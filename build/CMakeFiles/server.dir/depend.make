@@ -64,6 +64,8 @@ CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/Buffer.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/Callback.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/Channel.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/EventLoop.h
+CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/EventLoopThread.h
+CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/EventLoopThreadPool.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/Socket.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/TcpConnection.h
 CMakeFiles/server.dir/src/TcpServer.cc.o: ../include/TcpServer.h

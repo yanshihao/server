@@ -18,6 +18,8 @@ public:
     std::string toHostPortName(){
         return peerAddr_.to_string();
     }
+
+    EventLoop* getloop() const {return loop_;}
     
     void setConnectionCallback(const ConnectionCallback& cb)
     {

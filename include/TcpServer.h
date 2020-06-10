@@ -4,6 +4,8 @@
 #include "Socket.h"
 #include <map>
 #include <string>
+#include "EventLoopThreadPool.h"
+
 class EventLoop;
 class Acceptor;
 class TcpConnection;
@@ -16,6 +18,8 @@ class TcpServer
 public:
     TcpServer(EventLoop* loop, uint16_t port);
     ~TcpServer() {};
+
+    void setThreadNum(uint16_t n);
     void setConnectionCallback(const ConnectionCallback& cb)
     {
         connectionCallback_ = cb;
@@ -37,6 +41,9 @@ private:
     void removeChannelCallback(TcpConnectionPtr connptr);
 
     EventLoop* loop_;
+    
+    EventLoopThreadPool threadPool_;
+
     InetAddr localAddr_;
     std::shared_ptr<Acceptor> acceptor_;
     

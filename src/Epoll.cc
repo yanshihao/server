@@ -56,7 +56,6 @@ void Epoll::deleteChannel(Channel* channel)
 
 void Epoll::updateChannel(Channel* channel)
 {
-    assertInThisLoop();
     // 首先寻找
     struct epoll_event newEvent;
     int fd = channel->getfd();

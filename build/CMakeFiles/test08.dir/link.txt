@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/test08.dir/test/test08.cc.o  -o test08 -lpthread libserver.a 
+/usr/bin/c++   -g   CMakeFiles/test08.dir/test/test08.cc.o  -o test08 libserver.a -lpthread 

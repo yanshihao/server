@@ -38,28 +38,24 @@ void Channel::handle()
 
 void Channel::setReadable()
 {
-    assertInThisLoop();
     events_ |= (EPOLLIN |EPOLLPRI);
     updateChannel();
 }
 
 void Channel::setWritable()
 {
-    assertInThisLoop();
     events_ |= EPOLLOUT;
     updateChannel();
 }
 
 void Channel::setErrorable()
 {
-    assertInThisLoop();
     events_ |= EPOLLERR;
     updateChannel();
 }
 
 void Channel::setUnWritable()
 {
-    assertInThisLoop();
     events_ &= ~ (uint32_t) EPOLLERR;
     updateChannel();
 }
@@ -71,7 +67,6 @@ void Channel::assertInThisLoop()
 
 void Channel::updateChannel()
 {
-    assertInThisLoop();
     loop_->updateChannel(this);
 }
 

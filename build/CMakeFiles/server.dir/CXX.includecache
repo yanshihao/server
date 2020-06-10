@@ -105,6 +105,8 @@ map
 -
 string
 -
+EventLoopThreadPool.h
+../include/EventLoopThreadPool.h
 
 ../include/TimerQueue.h
 Timestamp.h

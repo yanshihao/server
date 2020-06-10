@@ -6,6 +6,8 @@ CMakeFiles/test11.dir/test/test11.cc.o
  ../include/Callback.h
  ../include/Channel.h
  ../include/EventLoop.h
+ ../include/EventLoopThread.h
+ ../include/EventLoopThreadPool.h
  ../include/Socket.h
  ../include/TcpConnection.h
  ../include/TcpServer.h
