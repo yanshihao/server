@@ -41,7 +41,7 @@ void TcpConnection::assertInThisThread()
 
 void TcpConnection::handleKillConnection()
 {
-    assert(state_ == Kconnected);
+    assert((state_ == Kconnected) || (state_ == Kdisconnecting));
     state_ = Kdisconnecting;
     // 去掉TcpServer的备份，并注册一个插入事件处理连接
     removeConnectionCallback_(shared_from_this());
@@ -69,8 +69,9 @@ void TcpConnection::handleRead()
     else
     {
         errno = saveErrno;
-        handleError();
+        perror("read");
         handleKillConnection();
+        handleError();
     }
 }
 
@@ -96,11 +97,10 @@ void TcpConnection::send(const std::string& str)
 void TcpConnection::sendInLoop(std::string str)
 {
     assertInThisThread();
-    if(state_ == KdisConnected)
+    if((state_ == KdisConnected) || state_ == Kdisconnecting)
     {
         return;
     }
-    
     if(writing_ == true)
     {
         outputBuffer_.append(str);
@@ -130,7 +130,6 @@ void TcpConnection::sendInLoop(std::string str)
 
 void TcpConnection::handleWrite()
 {
-    //assert(outputBuffer_.readableBytes() > 0);
     if(state_ == KdisConnected)
     {
         return;
@@ -139,6 +138,8 @@ void TcpConnection::handleWrite()
     int n = ::write(fd_, outputBuffer_.peek(), outputBuffer_.readableBytes());
     if(n == -1)
     {
+        perror("write");
+        handleKillConnection();
         handleError();
     }
     else
@@ -148,8 +149,32 @@ void TcpConnection::handleWrite()
         {
             channel_.setUnWritable();
             writing_ = false;
+            if(state_ == Kdisconnecting)
+                shutdownInLoop();
             if(writeCompleteCallback_)
                 writeCompleteCallback_(shared_from_this());
         }
+    }
+}
+
+void TcpConnection::handleError()
+{
+    
+}
+
+void TcpConnection::shutdown()
+{
+    state_ = Kdisconnecting;
+    loop_->runInLoop(
+        std::bind(&TcpConnection::shutdownInLoop, this)
+    );   
+}
+
+void TcpConnection::shutdownInLoop()
+{
+    assertInThisThread();
+    if(writing_ == false)
+    {
+        socket_.shutdownWrite();
     }
 }

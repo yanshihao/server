@@ -90,6 +90,7 @@ test13_EXTERNAL_OBJECTS =
 
 test13: CMakeFiles/test13.dir/test/test13.cc.o
 test13: CMakeFiles/test13.dir/build.make
+test13: libserver.a
 test13: CMakeFiles/test13.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ysh/git/server/s5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test13"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test13.dir/link.txt --verbose=$(VERBOSE)

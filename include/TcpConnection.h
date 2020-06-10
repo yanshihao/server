@@ -60,7 +60,7 @@ private:
     void handleRead();
 
     void handleWrite();
-    void handleError() {};
+    void handleError();
 
     void handleKillConnection();
     

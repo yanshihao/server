@@ -56,3 +56,5 @@ add_executable(test12 test/test12.cc)
 target_link_libraries(test12 -lpthread server)
 
 
+add_executable(test13 test/test13.cc)
+target_link_libraries(test13 -lpthread server)
