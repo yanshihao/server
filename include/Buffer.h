@@ -19,7 +19,7 @@ public:
         return buffer_.size() - writeIndex_;
     }
 
-    size_t readFd(int fd, int* saveErron);
+    int readFd(int fd, int* saveErron);
 
     void append(const std::string& str);
 

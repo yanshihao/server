@@ -64,7 +64,6 @@ void Epoll::updateChannel(Channel* channel)
     newEvent.events = channel->getEvents();
 
     // 存在则更新
-    printf("%d\n",fd);
     if(channelMap_.find(fd) != channelMap_.end())
     {
         assert(channelMap_[fd] == channel);
@@ -90,9 +89,17 @@ void Epoll::poll(ChannelList& channels)
     int numbers = epoll_wait(epollfd_, epollEvents_,MaxFd,5000);
     if(numbers == -1)
     {
-        perror("epoll_wait");
-        // 错误事件处理可以更加精细
-        exit(1);
+        switch (errno)
+        {
+        case EINTR:
+            return;
+            break;
+        default:
+            perror("epoll_wait");
+            // 错误事件处理可以更加精细
+            exit(1);
+            break;
+        }
     }
     else if(numbers == 0)
     {

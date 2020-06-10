@@ -69,6 +69,7 @@ void TcpConnection::handleRead()
     else
     {
         errno = saveErrno;
+        handleError();
         handleKillConnection();
     }
 }
@@ -95,7 +96,7 @@ void TcpConnection::send(const std::string& str)
 void TcpConnection::sendInLoop(std::string str)
 {
     assertInThisThread();
-    if(state_ == Kdisconnecting)
+    if(state_ == KdisConnected)
     {
         return;
     }
@@ -129,13 +130,12 @@ void TcpConnection::sendInLoop(std::string str)
 
 void TcpConnection::handleWrite()
 {
-    assert(outputBuffer_.readableBytes() > 0);
-    assert(writing_ == true);
-    if(state_ == Kdisconnecting)
+    //assert(outputBuffer_.readableBytes() > 0);
+    if(state_ == KdisConnected)
     {
         return;
     }
-
+    assert(writing_ == true);
     int n = ::write(fd_, outputBuffer_.peek(), outputBuffer_.readableBytes());
     if(n == -1)
     {

@@ -59,11 +59,9 @@ void Buffer::makeRoom(size_t len)
 {
     // 分两种情况讨论，一种是有足够空间当时在前面
     // 一种是没有足够空间
-    printf("%ld      %ld \n", buffer_.size(), len);
     if(writableBytes() + readIndex_ < len)
     {
         // 没有足够空间
-        printf("%ld      %ld \n", buffer_.size(), len);
         std::vector<char> newbuf(writeIndex_ + len);
         std::copy(begin() + readIndex_, begin()+ writeIndex_, &*newbuf.begin());
         std::swap(newbuf, buffer_);
@@ -79,7 +77,7 @@ void Buffer::makeRoom(size_t len)
     }
 }
 
-size_t Buffer::readFd(int fd, int* saveErrno)
+int Buffer::readFd(int fd, int* saveErrno)
 {
     char extrabuf[65536];
     struct iovec vec[2];
@@ -90,7 +88,6 @@ size_t Buffer::readFd(int fd, int* saveErrno)
     vec[1].iov_len = sizeof(extrabuf);
 
     int n = ::readv(fd, vec,2);
-    printf("n = %d\n", n);
     if( n < 0 )
     {
         perror("readv");
