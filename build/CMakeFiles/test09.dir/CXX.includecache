@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Socket.h
+sys/socket.h
+-
+netinet/in.h
+-
+string
+-
+
+/home/ysh/git/server/server/test/test09.cc
+sys/socket.h
+-
+iostream
+-
+netinet/in.h
+-
+Socket.h
+/home/ysh/git/server/server/test/Socket.h
+

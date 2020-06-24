@@ -19,6 +19,18 @@ void Buffer::retrieve(size_t len)
     }    
 }
 
+std::string Buffer::retrieveAsString(size_t len)
+{
+    assert(readableBytes() >= len);
+    std::string str(begin(), len);
+    readIndex_ += len;
+    if(readIndex_ == writeIndex_)
+    {
+        readIndex_ = 0;
+        writeIndex_ = 0;
+    }
+    return str;
+}
 
 void Buffer::retrieveUntil(const char* end)
 {

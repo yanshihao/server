@@ -68,3 +68,6 @@ target_link_libraries(test15 server -lpthread)
 
 add_executable(test16 test/test16.cc)
 target_link_libraries(test16 server -lpthread)
+
+add_executable(httpServer app/httpServer.cc app/http.cc)
+target_link_libraries(httpServer server -lpthread)

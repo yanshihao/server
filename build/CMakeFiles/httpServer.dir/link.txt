@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/httpServer.dir/app/httpServer.cc.o CMakeFiles/httpServer.dir/app/http.cc.o  -o httpServer libserver.a -lpthread 

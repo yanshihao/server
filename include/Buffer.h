@@ -27,6 +27,8 @@ public:
 
     void retrieve(size_t len);
 
+    std::string retrieveAsString(size_t len);
+
     void retrieveUntil(const char* end);
 
     void retrieveAll();
@@ -36,6 +38,16 @@ public:
     const char* peek() const
     {
         return begin() + readIndex_;
+    }
+
+    const char* beginWrite() const
+    {
+        return &(*buffer_.begin() )+ writeIndex_;
+    }
+
+    char* beginWrite()
+    {
+        return &(*buffer_.begin() )+ writeIndex_;
     }
 
     const char* find() const;
