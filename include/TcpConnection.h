@@ -43,6 +43,8 @@ public:
 
     void handleStartConnection();
 
+    void setReadable();
+
     const InetAddr& getPeerAddr() const {return peerAddr_;}
     const InetAddr& getLocalAddr() const {return localAddr_;}
     bool IsConnecting() const {return state_ == Kconnecting;}

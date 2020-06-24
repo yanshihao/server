@@ -6,6 +6,7 @@
 #include <assert.h>
 #include <unistd.h>
 #include "Timestamp.h"
+#include <iostream>
 TcpConnection::TcpConnection(EventLoop* loop, int fd)
 :state_(Kconnecting), loop_(loop),fd_(fd),
 socket_(fd), peerAddr_(sockets::getPeerAddr(fd)), 
@@ -18,6 +19,10 @@ writing_(false)
     channel_.setWriteCallback(
         std::bind(&TcpConnection::handleWrite,this)
     );
+}
+
+void TcpConnection::setReadable()
+{
     channel_.setReadable();
 }
 

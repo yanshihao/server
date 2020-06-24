@@ -39,6 +39,7 @@ public:
 private:
     void onAcceptorCallback(int fd, const InetAddr& peerAddr);
     void removeChannelCallback(TcpConnectionPtr connptr);
+    void setupConnection(TcpConnectionPtr newConnectionptr);
 
     EventLoop* loop_;
     

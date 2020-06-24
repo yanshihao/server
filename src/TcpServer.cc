@@ -31,14 +31,7 @@ void TcpServer::onAcceptorCallback(int fd, const InetAddr& peerAddr)
     EventLoop* tloop = threadPool_.getNextLoop();
     TcpConnectionPtr newConnectionptr(new TcpConnection(tloop,fd));
     connectionMap_[newConnectionptr->toHostPortName()] = newConnectionptr;
-    
-    newConnectionptr->setConnectionCallback(connectionCallback_);
-    newConnectionptr->setRemoveConnectionCallback(
-        std::bind(&TcpServer::removeChannelCallback,this, _1));
-    newConnectionptr->setMessageCallback(messageCallback_);
-    newConnectionptr->setWriteCompleteCallback(writeCompleteCallback_);
-
-    tloop->queueInLoop(std::bind(&TcpConnection::handleStartConnection,newConnectionptr));
+    tloop->queueInLoop(std::bind(&TcpServer::setupConnection,this,newConnectionptr));
 }
 
 void TcpServer::removeChannelCallback(TcpConnectionPtr connptr)
@@ -48,4 +41,16 @@ void TcpServer::removeChannelCallback(TcpConnectionPtr connptr)
     tloop->queueInLoop(
         std::bind(connectionCallback_,connptr)
     );
+}
+
+
+void TcpServer::setupConnection(TcpConnectionPtr newConnectionptr)
+{
+    newConnectionptr->handleStartConnection();
+    newConnectionptr->setConnectionCallback(connectionCallback_);
+    newConnectionptr->setRemoveConnectionCallback(
+        std::bind(&TcpServer::removeChannelCallback,this, _1));
+    newConnectionptr->setMessageCallback(messageCallback_);
+    newConnectionptr->setWriteCompleteCallback(writeCompleteCallback_);
+    newConnectionptr->setReadable();
 }
