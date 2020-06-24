@@ -34,20 +34,26 @@ void TcpServer::onAcceptorCallback(int fd, const InetAddr& peerAddr)
     tloop->queueInLoop(std::bind(&TcpServer::setupConnection,this,newConnectionptr));
 }
 
+
 void TcpServer::removeChannelCallback(TcpConnectionPtr connptr)
+{
+    loop_->runInLoop(
+        std::bind(&TcpServer::removeChannelInLoop, this, connptr));
+}
+
+void TcpServer::removeChannelInLoop(const TcpConnectionPtr& connptr)
 {
     connectionMap_.erase(connptr->toHostPortName());
     EventLoop* tloop = connptr->getloop();
-    tloop->queueInLoop(
-        std::bind(connectionCallback_,connptr)
+    tloop->runInLoop(
+        std::bind(&TcpConnection::connectDestroyed, connptr)
     );
 }
 
-
 void TcpServer::setupConnection(TcpConnectionPtr newConnectionptr)
 {
-    newConnectionptr->handleStartConnection();
     newConnectionptr->setConnectionCallback(connectionCallback_);
+    newConnectionptr->handleStartConnection();
     newConnectionptr->setRemoveConnectionCallback(
         std::bind(&TcpServer::removeChannelCallback,this, _1));
     newConnectionptr->setMessageCallback(messageCallback_);

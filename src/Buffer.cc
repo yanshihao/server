@@ -99,25 +99,41 @@ int Buffer::readFd(int fd, int* saveErrno)
     vec[1].iov_base = extrabuf;
     vec[1].iov_len = sizeof(extrabuf);
 
-    int n = ::readv(fd, vec,2);
-    if( n < 0 )
+    // 由一次读取改为多次读取
+    int sum = 0;
+    int n = 0;
+    while((n = ::readv(fd, vec,2)) > 0)
     {
-        perror("readv");
-        *saveErrno = errno;
+        if( n <= writableBytes())
+        {
+            writeIndex_ += n;
+        }
+        else
+        {
+            size_t writable = writableBytes();
+            writeIndex_ = buffer_.size();
+            append(extrabuf,n - writable);
+        }
+        vec[0].iov_base = begin() + writeIndex_;
+        vec[0].iov_len = writableBytes();
+        vec[1].iov_base = extrabuf;
+        vec[1].iov_len = sizeof(extrabuf);
+        sum += n;
     }
-    else if(n == 0)
+
+    if( n == -1)
     {
-        ;
+        switch (errno)
+        {
+        case EAGAIN:
+            
+            break;
+        
+        default:
+            perror("readv");
+            exit(1);
+            break;
+        }
     }
-    else if( n <= writableBytes())
-    {
-        writeIndex_ += n;
-    }
-    else
-    {
-        size_t writable = writableBytes();
-        writeIndex_ = buffer_.size();
-        append(extrabuf,n - writable);
-    }
-    return n;
+    return sum;
 }

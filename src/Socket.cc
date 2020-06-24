@@ -80,6 +80,20 @@ int Socket::accept(InetAddr& peerAddr)
     socklen_t len = sizeof(addr);
     int connfd = ::accept(fd_,(sockaddr*)&addr, &len);
     
+    if(connfd == -1)
+    {
+        switch (errno)
+        {
+        case EAGAIN:
+            
+            break;
+        
+        default:
+            break;
+        }
+        return -1;
+    }
+
     int saveErrno = errno;
     // 在创建之初就应当将套接字设置成 非阻塞和 禁止子进程复制文件描述符
 
@@ -90,6 +104,7 @@ int Socket::accept(InetAddr& peerAddr)
     if(ret == -1)
     {
         perror("fcntl set nonBlock");
+        printf("%d\n", connfd);
         exit(1);
     }
     // close-on-exec
@@ -161,7 +176,7 @@ void Socket::shutdownWrite()
     if(ret == -1)
     {
         perror("shutdown");
-        exit(1);
+        //exit(1);
     }
 }
 

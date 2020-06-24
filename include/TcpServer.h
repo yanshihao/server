@@ -40,7 +40,8 @@ private:
     void onAcceptorCallback(int fd, const InetAddr& peerAddr);
     void removeChannelCallback(TcpConnectionPtr connptr);
     void setupConnection(TcpConnectionPtr newConnectionptr);
-
+    void connectionCallbackWraper(TcpConnectionPtr&& connptr);
+    void removeChannelInLoop(const TcpConnectionPtr& connptr);
     EventLoop* loop_;
     
     EventLoopThreadPool threadPool_;

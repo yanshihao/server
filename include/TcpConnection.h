@@ -53,6 +53,8 @@ public:
     void send(const std::string& str);
     void shutdown();
 
+    void connectDestroyed();
+
 private:
     void assertInThisThread();
     bool inThisThread();

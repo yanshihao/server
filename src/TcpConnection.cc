@@ -46,17 +46,37 @@ void TcpConnection::assertInThisThread()
 
 void TcpConnection::handleKillConnection()
 {
+    switch (state_)
+    {
+    case Kconnecting:
+        std::cout << "Kconnecting" << std::endl;
+        break;
+    case Kconnected:
+        std::cout << "Kconnected" << std::endl;
+        break;
+    case Kdisconnecting:
+        std::cout << "Kdisconnecting" << std::endl;
+        break;
+    case KdisConnected:
+        std::cout << "KdisConnected" << std::endl;
+        break;
+
+    default:
+        break;
+    }
+    if(state_ == KdisConnected)
+        return;
     assert((state_ == Kconnected) || (state_ == Kdisconnecting));
-    state_ = Kdisconnecting;
+    state_ = KdisConnected;
     // 去掉TcpServer的备份，并注册一个插入事件处理连接
     removeConnectionCallback_(shared_from_this());
+    
     state_ = KdisConnected;
 }
 
 TcpConnection::~TcpConnection()
 {
     assert(state_ == KdisConnected);
-    channel_.deleteChannel();
 }
 
 void TcpConnection::handleRead()
@@ -70,13 +90,6 @@ void TcpConnection::handleRead()
     else if(n > 0)
     {
         messageCallback_(shared_from_this(),&inputBuffer_, Timestamp::now());   
-    }
-    else
-    {
-        errno = saveErrno;
-        perror("read");
-        handleKillConnection();
-        handleError();
     }
 }
 
@@ -181,5 +194,13 @@ void TcpConnection::shutdownInLoop()
     if(writing_ == false)
     {
         socket_.shutdownWrite();
+        handleKillConnection();
     }
+}
+
+
+void TcpConnection::connectDestroyed()
+{
+    connectionCallback_(shared_from_this());
+    channel_.deleteChannel();
 }
