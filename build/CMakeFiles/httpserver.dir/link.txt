@@ -1,1 +1,0 @@
-/usr/bin/c++   -g     -o httpserver libserver.a -lpthread 
